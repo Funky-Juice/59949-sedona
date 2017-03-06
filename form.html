@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrap">
+        <a class="page-header__logo">
+          <img src="http://placehold.it/150x100" alt="Седона">
+        </a>
+
+        <nav class="main-menu">
+          <a class="main-menu__toggle">
+            <img class="burger-button" src="http://placehold.it/10x10" width="10" height="10" alt="menu-button">
+          </a>
+
+          <div class="main-menu__wrap">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a>Главная</a>
+                <button class="main-menu__close-button" type="button" title="Закрыть"></button>
+              </li>
+              <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
+              <li class="main-menu__item"><a href="form.html">Форма отзыва</a></li>
+              <li class="main-menu__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <form class="review-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="review-form__title">
+          <h1>Оставьте свой отзыв</h1>
+          <p>Помогите нашим отелям стать лучше!
+            Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+
+        <fieldset class="name-fieldset">
+          <h2 class="name-fieldset__title">Представьтесь:</h2>
+
+          <label class="text-field">
+            <span class="text-field__title">Имя*:</span>
+            <div class="text-field__wrap">
+              <input class="text-field__input" type="text" name="user_name" placeholder="Петр" required>
+            </div>
+          </label>
+
+          <label class="text-field">
+            <span class="text-field__title">Фамилия*:</span>
+            <div class="text-field__wrap">
+              <input class="text-field__input" type="text" name="user_surname" placeholder="Иванов" required>
+            </div>
+          </label>
+
+          <label class="text-field">
+            <span class="text-field__title">Отчество:</span>
+            <div class="text-field__wrap">
+              <input class="text-field__input" type="text" name="user_patronym" placeholder="Александрович" required>
+            </div>
+          </label>
+        </fieldset>
+
+        <fieldset class="contacts-fieldset">
+          <h2 class="contacts-fieldset__title">Контактная информация:</h2>
+
+          <label class="text-field">
+            <div class="text-field__title">Контактный телефон*:</div>
+            <div class="text-field__wrap">
+              <input class="text-field__input" type="tel" name="user_phone" placeholder="Введите телефон">
+            </div>
+          </label>
+
+          <label class="text-field">
+            <div class="text-field__title">Электронная почта*:</div>
+            <div class="text-field__wrap">
+              <input class="text-field__input" type="email" name="user_email" placeholder="Введите e-mail">
+            </div>
+          </label>
+        </fieldset>
+
+        <fieldset class="evaluation-fieldset">
+          <h2 class="evaluation-fieldset__title">Ваше общее впечатление:</h2>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-1" name="user_evaluation" checked>
+              <label for="radio-1"></label>
+              <span class="radio-field__input-text">Скорее положительное</span>
+            </label>
+          </div>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-2" name="user_evaluation">
+              <label for="radio-2"></label>
+              <span class="radio-field__input-text">Скорее отрицательное</span>
+            </label>
+          </div>
+
+          <div class="evaluation-fieldset__wrap">
+            <label class="radio-field">
+              <input class="radio-field__input" type="radio" id="radio-3" name="user_evaluation">
+              <label for="radio-3"></label>
+              <span class="radio-field__input-text">Затрудняюсь ответить</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="places-fieldset">
+          <h2 class="places-fieldset__title">Посещенные достопримечательности:</h2>
+
+          <label class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" id="checkbox-1" name="user_places" checked>
+            <label for="checkbox-1"></label>
+            <span class="checkbox-field__input-text">Мост Дьявола</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" id="checkbox-2" name="user_places" checked>
+            <label for="checkbox-2"></label>
+            <span class="checkbox-field__input-text">Слайд-парк</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" id="checkbox-3" name="user_places" checked>
+            <label for="checkbox-3"></label>
+            <span class="checkbox-field__input-text">Гора-Колокол</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" id="checkbox-4" name="user_places" checked>
+            <label for="checkbox-4"></label>
+            <span class="checkbox-field__input-text">Красные скалы</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="text-field  review-fieldset">
+          <legend class="text-field__title  review-fieldset__title">Опишите свои эмоции</legend>
+          <div class="text-field__wrap">
+            <textarea class="text-field__input" name="user_review" rows="5" placeholder="Опишите подробно все свои восторги" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="review-form__send-button">
+          <input class="button  button--send-form" type="submit" value="Отправить Отзыв" name="review_form_submit">
+        </div>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrap">
+        <a class="logo">#visitsedona</a>
+
+        <div class="social-links">
+          <ul class="social-links__list">
+            <li><a class="social-links__item  social-links__item--twitter" href="1" title="twitter">twitter</a></li>
+            <li><a class="social-links__item  social-links__item--facebook" href="1" title="facebook">facebook</a></li>
+            <li><a class="social-links__item  social-links__item--youtube" href="1" title="youtube">youtube</a></li>
+          </ul>
+        </div>
+
+        <a class="developer" href="https://htmlacademy.ru/">
+          <span class="developer__text">Разработано</span>
+          <img src="http://placehold.it/10x10" width="27" height="34" alt="dev_logo">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
