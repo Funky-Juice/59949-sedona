@@ -1,0 +1,36 @@
+.contacts-fieldset {
+  border-top: 2px solid @color-light-grey;
+  text-align: center;
+}
+
+.contacts-fieldset__title {
+  .font-title();
+  line-height: 1.44;
+  color: @color-black;
+}
+
+.contacts-fieldset__field-name {
+  margin-left: 20px;
+}
+
+.contacts-fieldset__wrap-input {
+  position: relative;
+
+  &--phone-icon::before,
+  &--email-icon::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 62px;
+    height: 63px;
+  }
+
+  &--phone-icon::before {
+    background: @color-dark-grey url('../img/icon-phone.svg') no-repeat center;
+  }
+
+  &--email-icon::before {
+    background: @color-dark-grey url('../img/icon-mail.svg') no-repeat center;
+  }
+}

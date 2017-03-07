@@ -1,0 +1,36 @@
+.review-fieldset {
+  border-top: 2px solid @color-light-grey;
+  text-align: center;
+}
+
+.review-fieldset__title {
+  .font-title();
+  line-height: 1.44;
+  color: @color-black;
+}
+
+.review-fieldset__legend {
+  display: none;
+}
+
+.review-fieldset__wrap-input {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.review-fieldset__input {
+
+  &::placeholder {
+    color: @color-black;
+  }
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border: none;
+  .font-title();
+  line-height: 1.44;
+  color: @color-black;
+  text-transform: none;
+  background-color: @color-lighter-grey;
+}
