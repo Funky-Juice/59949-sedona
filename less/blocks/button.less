@@ -3,7 +3,10 @@
   padding: 20px;
   text-decoration: none;
 
-  &--blue {
+  &--search-form {
+    .font-title-big();
+    line-height: 1.23;
+    color: @color-white;
     background-color: @color-light-blue;
   }
 
@@ -15,5 +18,36 @@
     line-height: 1.23;
     color: @color-white;
     background-color: @color-light-blue;
+  }
+
+  &--popup-form {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    .font-title();
+    color: @color-white;
+    background-color: @color-light-blue;
+  }
+
+  &--popup-error {
+    width: 180px;
+  }
+
+
+  @media @tablet-width {
+
+    &--send-form {
+      float: left;
+      width: 300px;
+    }
+
+    &--popup-form {
+      width: 459px;
+      font-size: @font-size-large;
+    }
+
+    &--popup-error {
+      width: 272px;
+    }
   }
 }

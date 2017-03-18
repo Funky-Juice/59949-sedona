@@ -1,6 +1,20 @@
 .checkbox-field {
-  display: block;
-  margin: 20px;
+
+  label {
+    display: inline-block;
+    position: relative;
+    min-width: 56px;
+    height: 56px;
+    margin-right: 24px;
+    border: none;
+    border-radius: 5px;
+    vertical-align: middle;
+    background-color: @color-lighter-grey;
+  }
+}
+
+.checkbox-field__input {
+  display: none;
 }
 
 .checkbox-field__input-text {
@@ -8,4 +22,32 @@
   line-height: 1.44;
   color: @color-black;
   text-transform: none;
+}
+
+#checkbox-1:checked ~ label[for="checkbox-1"],
+#checkbox-2:checked ~ label[for="checkbox-2"],
+#checkbox-3:checked ~ label[for="checkbox-3"],
+#checkbox-4:checked ~ label[for="checkbox-4"] {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    border-radius: 5px;
+    background-color: @color-black;
+  }
+
+  &::before {
+    top: 50%;
+    left: 29%;
+    width: 13px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 47%;
+    left: 40%;
+    width: 22px;
+    transform: rotate(-47deg);
+  }
 }

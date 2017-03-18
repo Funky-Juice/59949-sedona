@@ -1,13 +1,19 @@
 .developer {
-
   img {
     vertical-align: middle;
   }
 
-  text-decoration: none;
+  box-sizing: border-box;
   display: block;
-  margin: 30px;
-  vertical-align: top;
+  height: 48px;
+  line-height: 48px;
+  text-decoration: none;
+
+  @media @tablet-width {
+    float: right;
+    width: 33%;
+    margin: 0;
+  }
 }
 
 .developer__text {

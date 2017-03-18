@@ -1,23 +1,28 @@
 .search-form {
-
+  background-color: @color-white;
 }
 
 .search-form__wrap {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
   .font-main();
   line-height: 1.71;
   color: @color-black;
+
+  @media @tablet-width {
+    width: 500px;
+  }
 }
 
 .search-form__title {
   .font-title-big();
   line-height: 1.23;
   color: @color-black;
-}
 
-.search-form__button {
-  .font-title-big();
-  line-height: 1.23;
-  color: @color-white;
+  @media @tablet-width {
+    font-size: @font-size-extra-large;
+  }
 }

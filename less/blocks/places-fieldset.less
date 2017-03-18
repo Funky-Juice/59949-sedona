@@ -1,16 +1,92 @@
 .places-fieldset {
-  border-top: 2px solid @color-light-grey;
+  border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @tablet-width {
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid @color-dark-grey;
+  }
 }
 
 .places-fieldset__title {
+
+  &--tablet {
+    display: none;
+  }
+
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @tablet-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      min-width: 350px;
+      margin: 0 auto 30px auto;
+    }
+
+    font-size: @font-size-large;
+  }
 }
 
 .places-fieldset__wrap {
   width: 280px;
   margin: 0 auto;
   text-align: left;
+
+  @media @tablet-width {
+    .clearfix();
+    width: auto;
+  }
+
+  @media @desktop-width {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.places-fieldset__continer {
+
+  @media @tablet-width {
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    float: left;
+  }
+
+  @media @desktop-width {
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+
+    width: 50%;
+  }
+}
+
+.places-fieldset__item {
+  display: block;
+  margin: 20px 0 20px 0;
+
+  @media @desktop-width {
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    display: inline-block;
+    margin-right: 60px;
+  }
 }

@@ -1,19 +1,98 @@
 .contacts-fieldset {
-  border-top: 2px solid @color-light-grey;
+  border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @tablet-width {
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid @color-dark-grey;
+  }
+
+  @media @desktop-width {
+    .clearfix();
+  }
 }
 
 .contacts-fieldset__title {
+
+  &--tablet {
+    display: none;
+  }
+
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @tablet-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      min-width: 350px;
+      margin: 0 auto 30px auto;
+    }
+
+    font-size: @font-size-large;
+  }
+}
+
+.contacts-fieldset__item {
+  display: block;
+  width: 280px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+
+  @media @tablet-width {
+    width: auto;
+  }
+
+  @media @desktop-width {
+
+    &:nth-child(odd) {
+      float: left;
+    }
+
+    &:nth-child(even) {
+      float: right;
+    }
+
+    float: left;
+    width: auto;
+  }
 }
 
 .contacts-fieldset__field-name {
+
+  &--desktop {
+    display: none;
+  }
+
   margin-left: 20px;
+
+  @media @desktop-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
+
+    display: inline-block;
+    margin-left: 0;
+  }
 }
 
 .contacts-fieldset__wrap-input {
+
+  input {
+    width: 100%;
+  }
+
   position: relative;
 
   &--phone-icon::before,
@@ -32,5 +111,10 @@
 
   &--email-icon::before {
     background: @color-dark-grey url('../img/icon-mail.svg') no-repeat center;
+  }
+
+  @media @desktop-width {
+    display: inline-block;
+    width: 316px;
   }
 }

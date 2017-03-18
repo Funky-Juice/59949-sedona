@@ -1,16 +1,32 @@
 .page-footer {
-
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: @color-dirty-white;
 }
 
 .page-footer__wrap {
+  box-sizing: border-box;
+  width: 100%;
   padding: 30px;
   text-align: center;
+
+  @media @tablet-width {
+    .clearfix();
+  }
 }
 
 .page-footer__logo {
+  box-sizing: border-box;
   display: block;
-  margin: 20px;
+  height: 48px;
+  margin-bottom: 20px;
+  line-height: 48px;
   .font-title-big();
-  line-height: 1.23;
   color: @color-black;
+
+  @media @tablet-width {
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
 }

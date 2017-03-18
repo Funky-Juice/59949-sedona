@@ -1,24 +1,32 @@
-.advantages {
+.advantages {}
 
-}
 .advantages__item-container {
-  &--first-img {
-    &::after {
-      content: '';
-      display: block;
-      height: 260px;
-      background: @color-light-blue url('../img/photo-city@1x.jpg') no-repeat center;
-      background-size: cover;
-    }
+
+  &:first-child {
+    padding-top: 10%;
+    background: @color-light-blue url('../img/bg-triangle.svg') no-repeat top;
+    background-size: 105%;
+    background-position: center -20px;
   }
 
-  &--second-img {
+  &--blue {
+    background-color: @color-light-blue;
+    color: @color-white;
+  }
+
+  &--grey {
+    background-color: @color-light-grey;
+  }
+
+  @media @tablet-width {
+
+    &:first-child {
+      padding-top: 0;
+      background: @color-light-blue;
+    }
+
     &::after {
-      content: '';
-      display: block;
-      height: 260px;
-      background: @color-light-blue url('../img/photo-4-mobile@1x.jpg') no-repeat center;
-      background-size: cover;
+      .clearfix();
     }
   }
 }
@@ -29,43 +37,75 @@
     line-height: 1.5;
   }
 
-  &--triangle {
-    background: url('../img/bg-triangle.svg') no-repeat top;
-    background-size: 105%, auto;
-  }
-
-  &--blue {
-    background-color: @color-light-blue;
-    color: @color-white;
-  }
-
   &--grey {
-    position: relative;
-    background-color: @color-light-grey;
-    color: @color-black;
+    border-bottom: 1px solid #d6d6d6;
 
-    &:last-child::after {
-      display: none;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 80%;
-      margin: 0 auto;
-      height: 1px;
-      background-color: #d6d6d6;
+    &:last-child {
+      border: none;
     }
   }
 
+
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
+
+  @media @tablet-width {
+
+    &--first {
+      width: 33%;
+      float: left;
+    }
+
+    &--second {
+      width: 33%;
+      float: right;
+    }
+
+    &--grey {
+      width: 33%;
+      float: left;
+      border: none;
+    }
+  }
 }
 
 .advantages__title {
   .font-title();
   line-height: 1.44;
+
+  @media @tablet-width {
+    font-size: @font-size-large;
+  }
+}
+
+.advantages__img {
+
+  &--first {
+    background: @color-light-blue url(../img/photo-city@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  &--second {
+    background: @color-light-blue url(../img/photo-4-mobile@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  box-sizing: border-box;
+  height: 260px;
+
+  @media @tablet-width {
+
+    &--first {
+      width: 67%;
+      float: right;
+    }
+
+    &--second {
+      width: 67%;
+      float: left;
+    }
+  }
 }

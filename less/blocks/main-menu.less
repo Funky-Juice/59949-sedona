@@ -1,5 +1,21 @@
 .main-menu {
+
+  &--tablet {
+    display: none;
+  }
+
   position: relative;
+
+  @media @tablet-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
 }
 
 .main-menu__toggle {
@@ -10,6 +26,10 @@
   width: 22px;
   height: 21px;
   background: none;
+
+  @media @tablet-width {
+    display: none;
+  }
 }
 
 .main-menu__burger-button {
@@ -43,6 +63,7 @@
 }
 
 .main-menu__item {
+
   a {
     .font-title();
     line-height: 2.22;
@@ -66,4 +87,26 @@
   border-bottom: 1px solid #678fa8;
   text-align: center;
   background-color: @color-light-blue;
+
+
+  @media @tablet-width {
+    a {
+      color: @color-black;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      float: left;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      float: right;
+    }
+
+    //width: 153.6px;
+    width: 20%;
+    border: none;
+    background-color: @color-white;
+  }
 }
