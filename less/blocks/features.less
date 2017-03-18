@@ -8,7 +8,7 @@
 
   @media @tablet-width{
     width: auto;
-    .clearfix();
+    display: flex;
   }
 }
 
@@ -18,8 +18,7 @@
   color: @color-black;
 
   @media @tablet-width{
-    float: left;
-    width: 33%;
+    flex-grow: 1;
   }
 }
 
@@ -30,27 +29,44 @@
   text-align: left;
 
   @media @tablet-width {
+
+    p {
+      max-width: 180px;
+      margin: 0 auto;
+    }
+
     margin-left: 0;
+    padding: 50px 40px 60px 40px;
     text-align: center;
+  }
+
+  @media @desktop-width {
+
+    p {
+      max-width: 310px;
+    }
   }
 }
 
 .features__icon {
   position: absolute;
-  top: 25px;
+  top: 12px;
   left: -30px;
 
   @media @tablet-width{
     position: static;
+    margin-bottom: 25px;
   }
 }
 
 .features__title {
+  margin-bottom: 15px;
   .font-title();
   line-height: 1.44;
   color: @color-black;
 
   @media @tablet-width{
+    margin-bottom: 25px;
     font-size: @font-size-large;
   }
 }

@@ -1,9 +1,13 @@
 .places-fieldset {
+  padding-top: 21px;
   border-top: 1px solid @color-dark-grey;
   text-align: center;
 
   @media @tablet-width {
-    margin: 0 auto;
+    order: 3;
+    width: 100%;
+    margin: 0 auto 35px auto;
+    padding-top: 0;
     border: none;
     border-top: 1px solid @color-dark-grey;
   }
@@ -15,6 +19,7 @@
     display: none;
   }
 
+  margin-bottom: 30px;
   .font-title();
   line-height: 1.44;
   color: @color-black;
@@ -28,9 +33,9 @@
     &--tablet {
       display: block;
       min-width: 350px;
-      margin: 0 auto 30px auto;
     }
 
+    margin-bottom: 40px;
     font-size: @font-size-large;
   }
 }
@@ -41,52 +46,43 @@
   text-align: left;
 
   @media @tablet-width {
-    .clearfix();
-    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    padding-left: 100px;
   }
 
   @media @desktop-width {
+    justify-content: space-between;
     width: 100%;
     margin: 0;
-  }
-}
-
-.places-fieldset__continer {
-
-  @media @tablet-width {
-
-    &:first-child {
-      margin-right: 20px;
-    }
-
-    float: left;
-  }
-
-  @media @desktop-width {
-
-    &:first-child {
-      margin-right: 0;
-    }
-
-    &:last-child {
-      text-align: right;
-    }
-
-    width: 50%;
+    padding-left: 0;
   }
 }
 
 .places-fieldset__item {
   display: block;
-  margin: 20px 0 20px 0;
+  margin-bottom: 20px;
 
-  @media @desktop-width {
+  @media @tablet-width {
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-child(2) {
+      order: 2;
     }
 
-    display: inline-block;
-    margin-right: 60px;
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop-width {
+    width: auto;
   }
 }

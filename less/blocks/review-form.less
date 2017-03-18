@@ -1,6 +1,8 @@
 .review-form {
 
   @media @tablet-width {
+    display: flex;
+    flex-wrap: wrap;
     width: 648px;
     margin: 0 auto;
   }
@@ -22,11 +24,13 @@
 
 .review-form__send-button {
   width: 280px;
-  margin: 30px auto 0 auto;
+  margin: 0 auto;
 
   @media @tablet-width {
+    order: 5;
     .clearfix();
     width: 100%;
+    margin-bottom: 61px;
   }
 }
 

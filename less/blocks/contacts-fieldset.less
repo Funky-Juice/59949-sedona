@@ -1,9 +1,13 @@
 .contacts-fieldset {
+  padding-top: 22px;
   border-top: 1px solid @color-dark-grey;
   text-align: center;
 
   @media @tablet-width {
-    margin: 0 auto;
+    order: 2;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding-top: 0;
     border: none;
     border-top: 1px solid @color-dark-grey;
   }
@@ -19,6 +23,7 @@
     display: none;
   }
 
+  margin-bottom: 30px;
   .font-title();
   line-height: 1.44;
   color: @color-black;
@@ -32,17 +37,21 @@
     &--tablet {
       display: block;
       min-width: 350px;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 22px auto;
     }
 
     font-size: @font-size-large;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 67px;
   }
 }
 
 .contacts-fieldset__item {
   display: block;
   width: 280px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 27px auto;
   text-align: left;
 
   @media @tablet-width {
@@ -71,6 +80,7 @@
   }
 
   margin-left: 20px;
+  margin-bottom: 5px;
 
   @media @desktop-width {
 
@@ -84,6 +94,7 @@
 
     display: inline-block;
     margin-left: 0;
+    margin-right: 10px;
   }
 }
 
@@ -101,8 +112,8 @@
     position: absolute;
     top: 1px;
     right: 1px;
-    width: 62px;
-    height: 63px;
+    width: 55px;
+    height: 55px;
   }
 
   &--phone-icon::before {
