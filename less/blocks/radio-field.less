@@ -1,5 +1,21 @@
 .radio-field {
+  display: block;
 
+  label {
+    display: inline-block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin-right: 30px;
+    border: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: @color-lighter-grey;
+  }
+}
+
+.radio-field__input {
+  display: none;
 }
 
 .radio-field__input-text {
@@ -7,4 +23,27 @@
   line-height: 1.44;
   color: @color-black;
   text-transform: none;
+}
+
+
+#radio-1:checked ~ label[for="radio-1"],
+#radio-2:checked ~ label[for="radio-2"],
+#radio-3:checked ~ label[for="radio-3"],
+#radio-4:checked ~ label[for="radio-4"],
+#radio-5:checked ~ label[for="radio-5"],
+#radio-6:checked ~ label[for="radio-6"]{
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: @color-black;
+  }
 }

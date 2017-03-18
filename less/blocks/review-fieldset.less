@@ -1,21 +1,47 @@
 .review-fieldset {
-  border-top: 2px solid @color-light-grey;
+  border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @tablet-width {
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid @color-dark-grey;
+  }
 }
 
 .review-fieldset__title {
+
+  &--tablet {
+    display: none;
+  }
+
   .font-title();
   line-height: 1.44;
   color: @color-black;
-}
 
-.review-fieldset__legend {
-  display: none;
+  @media @tablet-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      min-width: 350px;
+      margin: 0 auto 30px auto;
+    }
+
+    font-size: @font-size-large;
+  }
 }
 
 .review-fieldset__wrap-input {
   width: 280px;
   margin: 0 auto;
+
+  @media @tablet-width {
+    width: auto;
+  }
 }
 
 .review-fieldset__input {

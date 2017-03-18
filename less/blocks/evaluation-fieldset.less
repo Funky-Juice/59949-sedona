@@ -1,14 +1,49 @@
 .evaluation-fieldset {
-  border-top: 2px solid @color-light-grey;
+
+  &--tablet {
+    display: none;
+  }
+
+  border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @tablet-width {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+
+    float: left;
+    width: 50%;
+    border: none;
+  }
 }
 
 .evaluation-fieldset__title {
+  margin-bottom: 20px;
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @tablet-width {
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: @font-size-large;
+  }
+
+  @media @desktop-width {
+    text-align: center;
+  }
 }
 
 .evaluation-fieldset__wrap {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
+  @media @tablet-width {
+    text-align: left;
+  }
 }

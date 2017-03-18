@@ -1,20 +1,69 @@
 .name-fieldset {
-  border-top: 2px solid @color-light-grey;
+  border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @tablet-width {
+    float: right;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 55px;
+    border: none;
+    border-left: 1px solid @color-dark-grey;
+  }
+
+  @media @desktop-width {
+    padding-left: 75px;
+  }
 }
 
 .name-fieldset__title {
+  margin-bottom: 20px;
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @tablet-width {
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: @font-size-large;
+  }
+}
+
+.name-fieldset__item {
+  .clearfix();
+  width: 280px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+
+  @media @tablet-width {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .name-fieldset__field-name {
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 65px;
 }
 
 .name-fieldset__wrap-input {
-  display: inline-block;
-  vertical-align: middle;
+
+  input {
+    width: 200px;
+  }
+
+  float: right;
+
+  @media @tablet-width {
+
+    input {
+      width: 180px;
+    }
+  }
+
+  @media @desktop-width {
+
+    input {
+      width: 300px;
+    }
+  }
 }

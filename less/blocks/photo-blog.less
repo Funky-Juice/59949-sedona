@@ -1,19 +1,81 @@
-.photo-blog {}
+.photo-blog {
+  background-color: @color-white;
+
+  @media @tablet-width {
+    .clearfix();
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-width {
+    width: 1200px;
+  }
+}
 
 .photo-blog__post {
   box-sizing: border-box;
   padding: 20px;
-  border-top: 2px solid @color-light-grey;
+  border-top: 1px solid @color-light-grey;
   text-align: center;
+
+  @media @tablet-width {
+
+    &--big {
+      width: 100%;
+    }
+
+    float: left;
+    width: 50%;
+    padding: 0;
+    border: none;
+  }
+
+  @media @desktop-width {
+
+    &--big {
+      width: 100%;
+    }
+
+    position: relative;
+    width: 33.333333%;
+  }
 }
 
 .photo-blog__picture {
+  display: block;
+  margin: 0 auto;
+
+  @media @tablet-width {
+    width: 100%;
+  }
 }
 
 .photo-blog__content {
+  box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
   text-align: left;
+
+  @media @tablet-width {
+    .clearfix();
+    width: 100%;
+    padding: 20px;
+    background-color: @color-lighter-grey;
+  }
+
+  @media @desktop-width {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo-blog__description {
+
+  @media @tablet-width {
+    float: left;
+  }
 }
 
 .photo-blog__title {
@@ -21,25 +83,46 @@
   font-weight: bold;
   line-height: 1.71;
   color: @color-black;
+
+  @media @desktop-width {
+    color: @color-white;
+  }
 }
 
 .photo-blog__author {
-  display: block;
   .font-main();
   text-transform: none;
   line-height: 1.71;
   color: @color-black;
+
+  @media @desktop-width {
+    color: @color-white;
+  }
+}
+
+.photo-blog__likes-container {
+
+  @media @tablet-width {
+    float: right;
+    margin-top: 10px;
+  }
 }
 
 .photo-blog__like-icon {
   display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: @color-white;
 }
 
 .photo-blog__likes {
   display: inline-block;
-  margin-left: 10px;
+  vertical-align: middle;
   .font-main();
   font-weight: bold;
-  line-height: 1.71;
   color: @color-black;
+
+  @media @desktop-width {
+    color: @color-white;
+  }
 }

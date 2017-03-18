@@ -1,13 +1,38 @@
-.video-blog{}
+.video-blog{
+  background-color: @color-white;
+
+  @media @tablet-width {
+    width: 648px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
+  @media @desktop-width {
+    width: 800px;
+  }
+}
 
 .video-blog__post {
-  border-top: 2px solid @color-light-grey;
+  padding-top: 35px;
+  border-top: 1px solid @color-light-grey;
+
+  @media @tablet-width {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+  }
 }
 
 .video-blog__content {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   text-align: center;
+
+  @media @tablet-width {
+    width: 420px;
+    margin-bottom: 75px;
+  }
 }
 
 .video-blog__content {
@@ -22,10 +47,18 @@
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @tablet-width {
+    font-size: @font-size-extra-large;
+  }
 }
 
 .video-blog__video {
+  display: block;
   width: 320px;
   margin: 0 auto;
-  text-align: center;
+
+  @media @tablet-width {
+    width: 100%;
+  }
 }

@@ -1,8 +1,43 @@
 .review-form {
 
+  @media @tablet-width {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-width {
+    width: 960px;
+  }
+}
+
+.review-form__fieldset-wrap {
+  .clearfix();
+  width: 100%;
+  text-align: center;
+
+  @media @tablet-width {
+    margin: 0 auto 50px auto;
+  }
 }
 
 .review-form__send-button {
   width: 280px;
   margin: 30px auto 0 auto;
+
+  @media @tablet-width {
+    .clearfix();
+    width: 100%;
+  }
+}
+
+.review-form__required-fields {
+  display: none;
+
+  @media @tablet-width {
+    display: block;
+    float: right;
+    .font-main();
+    line-height: 65px;
+    color: @color-black;
+  }
 }
