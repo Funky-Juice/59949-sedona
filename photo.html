@@ -1,172 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<div class="page-wrap">
-  <header class="page-header">
-    <nav class="main-menu  main-menu--mobile">
-      <a class="main-menu__toggle">
-        <img class="main-menu__burger-button" src="img/icon-menu.svg" width="23" height="21" alt="Открыть">
-        <span class="main-menu__close-button" title="Закрыть"></span>
-      </a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <div class="page-wrap">
+    <header class="page-header">
+      <nav class="main-menu  main-menu--opened  main-menu--nojs">
+        <button class="main-menu__toggle" type="button"></button>
 
-      <div class="main-menu__wrap">
         <ul class="main-menu__list">
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
           <li class="main-menu__item"><a>Фото и видео</a></li>
           <li class="main-menu__item"><a href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="page-header__wrap">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-sedona-mobile.svg" alt="Седона">
-      </a>
-
-      <nav class="main-menu  main-menu--tablet">
-        <a class="main-menu__toggle">
-          <img class="main-menu__burger-button" src="img/icon-menu.svg" width="23" height="21" alt="Открыть">
-          <span class="main-menu__close-button" title="Закрыть"></span>
+      <div class="page-header__wrap">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" alt="Седона">
         </a>
+      </div>
+    </header>
 
-        <div class="main-menu__wrap">
-          <ul class="main-menu__list">
-            <li class="main-menu__item"><a href="index.html">Главная</a></li>
-            <li class="main-menu__item"><a>Фото и видео</a></li>
-            <li class="main-menu__item"><a href="form.html">Форма отзыва</a></li>
-            <li class="main-menu__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+    <main>
+      <section class="intro">
+        <div class="intro__content">
+          <h1 class="intro__title">Фото и видео</h1>
+          <span class="intro__text">Не можете решиться на путешествие из-за курса?
+          Фотографии помогут вам забыть о политике и экономике.</span>
+        </div>
+      </section>
+
+      <section class="media">
+        <div class="photo-blog">
+          <article class="photo-blog__post  photo-blog__post--big">
+            <img class="photo-blog__picture" src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="picture">
+
+            <div class="photo-blog__content">
+              <div class="photo-blog__description">
+                <h2 class="photo-blog__title">Неродные просторы</h2>
+                <span class="photo-blog__author">Автор фото: Борис</span>
+              </div>
+
+              <div class="photo-blog__likes-container">
+                <a class="photo-blog__like-icon" href="1" title="like">
+                  <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
+                </a>
+                <div class="photo-blog__likes">1350</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-blog__post">
+            <img class="photo-blog__picture" src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="picture">
+
+            <div class="photo-blog__content">
+              <div class="photo-blog__description">
+                <h2 class="photo-blog__title">Местная растительность</h2>
+                <span class="photo-blog__author">Автор фото: Сергей</span>
+              </div>
+
+              <div class="photo-blog__likes-container">
+                <a class="photo-blog__like-icon" href="1" title="like">
+                  <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
+                </a>
+                <div class="photo-blog__likes">143</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-blog__post">
+            <img class="photo-blog__picture" src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="picture">
+
+            <div class="photo-blog__content">
+              <div class="photo-blog__description">
+                <h2 class="photo-blog__title">Дорога на север</h2>
+                <span class="photo-blog__author">Автор фото: Петр</span>
+              </div>
+
+              <div class="photo-blog__likes-container">
+                <a class="photo-blog__like-icon" href="1" title="like">
+                  <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
+                </a>
+                <div class="photo-blog__likes">96</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="photo-blog__post">
+            <img class="photo-blog__picture" src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="picture">
+
+            <div class="photo-blog__content">
+              <div class="photo-blog__description">
+                <h2 class="photo-blog__title">Мост дьявола</h2>
+                <span class="photo-blog__author">Автор фото: Антон</span>
+              </div>
+
+              <div class="photo-blog__likes-container">
+                <a class="photo-blog__like-icon" href="1" title="like">
+                  <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
+                </a>
+                <div class="photo-blog__likes">254</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="video-blog">
+          <article class="video-blog__post">
+            <div class="video-blog__content">
+              <h2 class="video-blog__title">Все еще сомневаетесь?</h2>
+              <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            </div>
+
+            <video class="video-blog__video" controls poster="img/video-mobile@1x.jpg" preload="metadata">
+              <source src="video.mp4" type="video/mp4">
+              <source src="video.ogv" type="video/ogg">
+              <source src="video.webm" type="video/webm">
+            </video>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrap">
+        <a class="page-footer__logo">#visitsedona</a>
+
+        <div class="social-links">
+          <ul class="social-links__list">
+            <li><a class="social-links__item  social-links__item--twitter" href="1" title="twitter">twitter</a></li>
+            <li><a class="social-links__item  social-links__item--facebook" href="1" title="facebook">facebook</a></li>
+            <li><a class="social-links__item  social-links__item--youtube" href="1" title="youtube">youtube</a></li>
           </ul>
         </div>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="intro">
-      <div class="intro__content">
-        <h1 class="intro__title">Фото и видео</h1>
-        <span class="intro__text">Не можете решиться на путешествие из-за курса?
-          Фотографии помогут вам забыть о политике и экономике.</span>
+        <a class="developer" href="https://htmlacademy.ru/">
+          <span class="developer__text">Разработано</span>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
+        </a>
       </div>
-    </section>
+    </footer>
+  </div>
 
-    <section class="media">
-      <div class="photo-blog">
-        <article class="photo-blog__post  photo-blog__post--big">
-          <img class="photo-blog__picture" src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="picture">
-
-          <div class="photo-blog__content">
-            <div class="photo-blog__description">
-              <h2 class="photo-blog__title">Неродные просторы</h2>
-              <span class="photo-blog__author">Автор фото: Борис</span>
-            </div>
-
-            <div class="photo-blog__likes-container">
-              <a class="photo-blog__like-icon" href="1" title="like">
-                <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
-              </a>
-              <div class="photo-blog__likes">1350</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="photo-blog__post">
-          <img class="photo-blog__picture" src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="picture">
-
-          <div class="photo-blog__content">
-            <div class="photo-blog__description">
-              <h2 class="photo-blog__title">Местная растительность</h2>
-              <span class="photo-blog__author">Автор фото: Сергей</span>
-            </div>
-
-            <div class="photo-blog__likes-container">
-              <a class="photo-blog__like-icon" href="1" title="like">
-                <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
-              </a>
-              <div class="photo-blog__likes">143</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="photo-blog__post">
-          <img class="photo-blog__picture" src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="picture">
-
-          <div class="photo-blog__content">
-            <div class="photo-blog__description">
-              <h2 class="photo-blog__title">Дорога на север</h2>
-              <span class="photo-blog__author">Автор фото: Петр</span>
-            </div>
-
-            <div class="photo-blog__likes-container">
-              <a class="photo-blog__like-icon" href="1" title="like">
-                <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
-              </a>
-              <div class="photo-blog__likes">96</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="photo-blog__post">
-          <img class="photo-blog__picture" src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="picture">
-
-          <div class="photo-blog__content">
-            <div class="photo-blog__description">
-              <h2 class="photo-blog__title">Мост дьявола</h2>
-              <span class="photo-blog__author">Автор фото: Антон</span>
-            </div>
-
-            <div class="photo-blog__likes-container">
-              <a class="photo-blog__like-icon" href="1" title="like">
-                <img src="img/icon-like.svg" width="23" height="21" alt="like-icon">
-              </a>
-              <div class="photo-blog__likes">254</div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="video-blog">
-        <article class="video-blog__post">
-          <div class="video-blog__content">
-            <h2 class="video-blog__title">Все еще сомневаетесь?</h2>
-            <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          </div>
-
-          <video class="video-blog__video" controls poster="img/video-mobile@1x.jpg" preload="metadata">
-            <source src="video.mp4" type="video/mp4">
-            <source src="video.ogv" type="video/ogg">
-            <source src="video.webm" type="video/webm">
-          </video>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="page-footer">
-    <div class="page-footer__wrap">
-      <a class="page-footer__logo">#visitsedona</a>
-
-      <div class="social-links">
-        <ul class="social-links__list">
-          <li><a class="social-links__item  social-links__item--twitter" href="1" title="twitter">twitter</a></li>
-          <li><a class="social-links__item  social-links__item--facebook" href="1" title="facebook">facebook</a></li>
-          <li><a class="social-links__item  social-links__item--youtube" href="1" title="youtube">youtube</a></li>
-        </ul>
-      </div>
-
-      <a class="developer" href="https://htmlacademy.ru/">
-        <span class="developer__text">Разработано</span>
-        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
-      </a>
-    </div>
-  </footer>
-</div>
-</body>
+  <script type="text/javascript" src="js/main-menu.js"></script>
+  </body>
 </html>

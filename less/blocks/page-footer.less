@@ -7,11 +7,17 @@
 .page-footer__wrap {
   box-sizing: border-box;
   width: 100%;
-  padding: 30px;
+  padding: 30px 8%;
   text-align: center;
 
   @media @tablet-width {
-    .clearfix();
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 8%;
+  }
+
+  @media @desktop-width {
+    padding: 36px 10%;
   }
 }
 
@@ -19,14 +25,12 @@
   box-sizing: border-box;
   display: block;
   height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   line-height: 48px;
   .font-title-big();
   color: @color-black;
 
   @media @tablet-width {
-    float: left;
-    width: 33%;
     margin: 0;
   }
 }

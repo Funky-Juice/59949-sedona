@@ -1,15 +1,23 @@
 .review-fieldset {
+  margin-bottom: 50px;
+  padding-top: 23px;
   border-top: 1px solid @color-dark-grey;
   text-align: center;
 
   @media @tablet-width {
-    margin: 0 auto;
+    order: 4;
+    width: 100%;
+    margin-bottom: 58px;
     border: none;
     border-top: 1px solid @color-dark-grey;
   }
 }
 
 .review-fieldset__title {
+
+  &--mobile {
+    margin-bottom: 22px;
+  }
 
   &--tablet {
     display: none;

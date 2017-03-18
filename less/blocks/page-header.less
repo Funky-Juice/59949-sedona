@@ -7,9 +7,12 @@
 
 .page-header__wrap {
   position: relative;
-  width: 100%;
-  min-height: 56px;
-  background-color: @color-white;
+  height: 56px;
+
+  @media @tablet-width {
+    position: static;
+    height: 0;
+  }
 }
 
 .page-header__logo {

@@ -1,43 +1,21 @@
 .main-menu {
-
-  &--tablet {
-    display: none;
-  }
-
   position: relative;
+  background-color: @color-white;
 
-  @media @tablet-width {
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+  &--closed .main-menu__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 23px;
+    height: 4px;
+    background-color: @color-light-blue;
+    box-shadow: 0 8px 0 0 @color-light-blue,
+    0 16px 0 0 @color-light-blue;
   }
-}
 
-.main-menu__toggle {
-  display: block;
-  position: absolute;
-  top: 15px;
-  right: 30px;
-  width: 22px;
-  height: 21px;
-  background: none;
-
-  @media @tablet-width {
-    display: none;
-  }
-}
-
-.main-menu__burger-button {
-  display: none;
-}
-
-.main-menu__close-button {
-  &::before, &::after {
+  &--opened .main-menu__toggle::before,
+  &--opened .main-menu__toggle::after {
     content: '';
     position: absolute;
     top: 8px;
@@ -47,12 +25,45 @@
     background-color: #ffffff;
   }
 
-  &::before {
-    transform: rotate(45deg);
+  &--opened .main-menu__toggle {
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
-  &::after {
-    transform: rotate(-45deg);
+  &--nojs .main-menu__list {
+    display: block;
+  }
+
+  @media @mobile-widths-only {
+
+    &--closed .main-menu__list {
+      display: none;
+    }
+  }
+
+  @media @tablet-width {
+    min-height: 56px;
+  }
+}
+
+.main-menu__toggle {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 23px;
+  height: 20px;
+  border: none;
+  z-index: 9;
+  background: none;
+
+  @media @tablet-width {
+    display: none;
   }
 }
 
@@ -60,6 +71,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media @tablet-width {
+    display: flex;
+  }
 }
 
 .main-menu__item {
@@ -90,21 +105,15 @@
 
 
   @media @tablet-width {
+
     a {
       color: @color-black;
     }
 
-    &:nth-child(1),
     &:nth-child(2) {
-      float: left;
+      margin-right: auto;
     }
 
-    &:nth-child(3),
-    &:nth-child(4) {
-      float: right;
-    }
-
-    //width: 153.6px;
     width: 20%;
     border: none;
     background-color: @color-white;

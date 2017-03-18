@@ -1,14 +1,15 @@
 .video-blog{
+  padding-bottom: 35px;
   background-color: @color-white;
 
   @media @tablet-width {
     width: 648px;
     margin: 0 auto;
-    padding-top: 60px;
   }
 
   @media @desktop-width {
     width: 800px;
+    padding-bottom: 85px;
   }
 }
 
@@ -20,6 +21,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    padding-top: 60px;
     border: none;
   }
 }
@@ -36,14 +38,25 @@
 }
 
 .video-blog__content {
+
   p {
+    width: 250px;
+    margin: 0 auto;
     .font-main();
     line-height: 1.71;
     color: @color-black;
   }
+
+  @media @tablet-width {
+
+    p {
+      width: auto;
+    }
+  }
 }
 
 .video-blog__title {
+  margin-bottom: 35px;
   .font-title();
   line-height: 1.44;
   color: @color-black;

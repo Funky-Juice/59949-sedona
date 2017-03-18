@@ -3,26 +3,46 @@
 }
 
 .search-form__wrap {
+  br {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 38px;
+  }
+
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   .font-main();
   line-height: 1.71;
   color: @color-black;
 
   @media @tablet-width {
+
+    br {
+      display: inline;
+    }
+
+    p {
+      margin-bottom: 44px;
+    }
+
     width: 500px;
+    padding: 50px 20px 40px 20px;
   }
 }
 
 .search-form__title {
+  margin-bottom: 22px;
   .font-title-big();
   line-height: 1.23;
   color: @color-black;
 
   @media @tablet-width {
+    margin-bottom: 37px;
     font-size: @font-size-extra-large;
   }
 }
