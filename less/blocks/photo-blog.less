@@ -42,13 +42,19 @@
   }
 }
 
-.photo-blog__picture {
-  display: block;
+.photo-blog__picture-wrap {
+  max-width: 280px;
   margin: 0 auto;
 
   @media @tablet-width {
-    width: 100%;
+    max-width: none;
   }
+}
+
+.photo-blog__picture {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .photo-blog__content {
@@ -109,7 +115,7 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  color: @color-white;
+  //color: red;
 }
 
 .photo-blog__likes {

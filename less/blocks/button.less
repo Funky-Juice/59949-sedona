@@ -2,6 +2,20 @@
   display: block;
   padding: 20px;
   text-decoration: none;
+  outline: none;
+
+  &:hover {
+    background-color: @color-blue;
+  }
+
+  &:active {
+    background-color: @color-dark-blue;
+    color: #88b6d1;
+  }
+
+  &:disabled {
+    background-color: @color-dark-grey;
+  }
 
   &--search-form {
     margin-bottom: 20px;

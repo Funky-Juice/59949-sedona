@@ -1,7 +1,16 @@
 .radio-field {
   display: block;
+  cursor: pointer;
 
   label {
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+    }
+
     display: inline-block;
     position: relative;
     width: 57px;
@@ -11,6 +20,7 @@
     border-radius: 50%;
     vertical-align: middle;
     background-color: @color-lighter-grey;
+    cursor: pointer;
   }
 }
 
@@ -28,10 +38,11 @@
 
 #radio-1:checked ~ label[for="radio-1"],
 #radio-2:checked ~ label[for="radio-2"],
-#radio-3:checked ~ label[for="radio-3"],
-#radio-4:checked ~ label[for="radio-4"],
-#radio-5:checked ~ label[for="radio-5"],
-#radio-6:checked ~ label[for="radio-6"]{
+#radio-3:checked ~ label[for="radio-3"] {
+
+  &:active::before {
+    background-color: #a4a4a4;
+  }
 
   &::before {
     content: '';

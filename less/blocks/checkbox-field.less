@@ -1,6 +1,14 @@
 .checkbox-field {
 
   label {
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+    }
+
     display: inline-block;
     position: relative;
     min-width: 56px;
@@ -10,6 +18,7 @@
     border-radius: 5px;
     vertical-align: middle;
     background-color: @color-lighter-grey;
+    cursor: pointer;
   }
 }
 
@@ -22,12 +31,19 @@
   line-height: 1.44;
   color: @color-black;
   text-transform: none;
+  cursor: pointer;
 }
 
 #checkbox-1:checked ~ label[for="checkbox-1"],
 #checkbox-2:checked ~ label[for="checkbox-2"],
 #checkbox-3:checked ~ label[for="checkbox-3"],
 #checkbox-4:checked ~ label[for="checkbox-4"] {
+
+  &:active::before,
+  &:active::after{
+    background-color: #a4a4a4;
+  }
+
   &::before,
   &::after {
     content: '';
