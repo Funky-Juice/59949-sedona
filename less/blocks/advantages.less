@@ -131,13 +131,23 @@
 .advantages__img {
 
   &--first {
-    background: @color-light-blue url(../img/photo-city@1x.jpg) no-repeat center;
+    background: @color-light-blue url(../img/photo-city-tablet@1x.jpg) no-repeat center;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: @color-light-blue url(../img/photo-city-tablet@2x.jpg) no-repeat center;
+      background-size: cover;
+    }
   }
 
   &--second {
-    background: @color-light-blue url(../img/photo-4-mobile@1x.jpg) no-repeat center;
+    background: @color-light-blue url(../img/photo-bridge-tablet@1x.jpg) no-repeat center;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: @color-light-blue url(../img/photo-bridge-tablet@2x.jpg) no-repeat center;
+      background-size: cover;
+    }
   }
 
   box-sizing: border-box;
@@ -148,11 +158,33 @@
     &--first {
       width: 67%;
       float: right;
+      background: @color-light-blue url(../img/photo-city@1x.jpg) no-repeat center;
+      background-size: cover;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: @color-light-blue url(../img/photo-city@2x.jpg) no-repeat center;
+        background-size: cover;
+      }
     }
 
     &--second {
       width: 67%;
       float: left;
+      background: @color-light-blue url(../img/photo-bridge@1x.jpg) no-repeat center;
+      background-size: cover;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: @color-light-blue url(../img/photo-bridge@2x.jpg) no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+
+  @media @desktop-width {
+
+    &--second {
+      background: @color-light-blue url(../img/photo-bridge@2x.jpg) no-repeat center;
+      background-size: cover;
     }
   }
 }

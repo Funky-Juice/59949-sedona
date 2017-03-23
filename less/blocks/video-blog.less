@@ -66,12 +66,18 @@
   }
 }
 
-.video-blog__video {
-  display: block;
+.video-blog__video-wrap {
   width: 320px;
   margin: 0 auto;
 
   @media @tablet-width {
-    width: 100%;
+    position: relative;
+    width: auto;
   }
+}
+
+.video-blog__video {
+  display: block;
+  width: 100%;
+  height: auto;
 }

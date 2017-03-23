@@ -7,6 +7,16 @@
 
 .text-field__input {
 
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: @color-white;
+    outline: 4px solid #e5e5e5;
+    border: none;
+  }
+
   &::placeholder {
     .font-title();
     line-height: 1.44;

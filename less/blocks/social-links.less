@@ -8,6 +8,7 @@
 }
 
 .social-links__list {
+
   li {
     display: inline-block;
     margin-right: 6px;
@@ -21,19 +22,37 @@
 
 .social-links__item {
   &--twitter {
-    background: url('../img/icon-twitter.svg') no-repeat center;
-    background-color: @color-light-blue;
+    background: @color-light-blue url('../img/icon-twitter.svg') no-repeat center;
+
+    &:active {
+      background:  url('../img/icon-twitter-blue.svg') no-repeat center;
+    }
   }
 
   &--facebook {
-    background: url('../img/icon-facebook.svg') no-repeat center;
-    background-color: @color-light-blue;
+    background: @color-light-blue url('../img/icon-facebook.svg') no-repeat center;
+
+    &:active {
+      background:  url('../img/icon-facebook-blue.svg') no-repeat center;
+    }
   }
 
   &--youtube {
-    background: url('../img/icon-youtube.svg') no-repeat center;
-    background-color: @color-light-blue;
+    background: @color-light-blue url('../img/icon-youtube.svg') no-repeat center;
+
+    &:active {
+      background: @color-light-blue url('../img/icon-youtube-blue.svg') no-repeat center;
+    }
   }
+
+  &:hover {
+    background-color: @color-blue;
+  }
+
+  //&:active {
+  //  //background-color: @color-dark-blue;
+  //  color: red;
+  //}
 
   display: block;
   width: 46px;

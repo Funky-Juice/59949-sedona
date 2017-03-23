@@ -19,6 +19,32 @@
 
   @media @tablet-width{
     flex-grow: 1;
+
+    &:nth-child(1) {
+
+      .features__icon {
+        width: 75px;
+        height: 75px;
+      }
+    }
+
+    &:nth-child(2) {
+      order: 2;
+
+      .features__icon {
+        width: 64px;
+        height: 75px;
+      }
+    }
+
+    &:nth-child(3) {
+      order:1;
+
+      .features__icon {
+        width: 77px;
+        height: 75px;
+      }
+    }
   }
 }
 
@@ -48,13 +74,14 @@
   }
 }
 
-.features__icon {
+.features__icon-wrap {
   position: absolute;
   top: 12px;
   left: -30px;
 
   @media @tablet-width{
     position: static;
+    height: 75px;
     margin-bottom: 25px;
   }
 }

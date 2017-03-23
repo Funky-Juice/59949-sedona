@@ -1,7 +1,6 @@
 var mainMenu = document.querySelector('.main-menu');
 var mainMenuToggle = document.querySelector('.main-menu__toggle');
 
-mainMenu.classList.remove('main-menu--nojs');
 mainMenu.classList.remove('main-menu--opened');
 mainMenu.classList.add('main-menu--closed');
 
