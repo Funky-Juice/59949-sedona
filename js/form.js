@@ -61,6 +61,8 @@
 
         var pattern = input.getAttribute('pattern');
 
+        if (!pattern) pattern = "^[А-Яа-яЁё \s \n \. \, \;]+$" ;
+
         pattern = new RegExp(pattern);
 
         if(pattern.test(input.value) !== true) {
