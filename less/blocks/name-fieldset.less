@@ -20,13 +20,14 @@
 }
 
 .name-fieldset__title {
-  margin-bottom: 24px;
+  max-width: 250px;
+  margin: 0 auto 24px auto;
   .font-title();
   line-height: 1.44;
   color: @color-black;
 
   @media @tablet-width {
-    margin-bottom: 60px;
+    margin: 0 auto 60px 0;
     text-align: left;
     font-size: @font-size-large;
   }
@@ -44,14 +45,17 @@
 }
 
 .name-fieldset__field-name {
+  max-width: 100px;
   margin-right: 13px;
   line-height: 57px;
+  overflow: hidden;
 }
 
-.name-fieldset__wrap-input {
+.name-fieldset__input-wrap {
   flex-grow: 1;
+  width: 70%;
 
   input {
-    width: 100%;
+    width:100%;
   }
 }

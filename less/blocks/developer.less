@@ -1,25 +1,29 @@
 .developer {
+
   svg {
-
-    &:hover {
-      fill: @color-light-blue;
-    }
-
-    &:active {
-      fill: #b2b2b2;
-    }
-
     vertical-align: middle;
     fill: @color-black;
   }
 
+  &:hover {
+    svg {
+      fill: @color-light-blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #b2b2b2;
+    }
+  }
+
   box-sizing: border-box;
   display: block;
-  height: 48px;
   line-height: 48px;
   text-decoration: none;
 
   @media @tablet-width {
+    max-width: 220px;
     margin: 0;
   }
 }

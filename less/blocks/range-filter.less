@@ -1,7 +1,7 @@
 .range-filter {
   -webkit-appearance: none;
   width: 100%;
-  height: 10px;
+  height: 44px;
   outline: none;
   border: none;
   background-color: transparent;
@@ -10,17 +10,25 @@
     background-color: #c1c1c1;
   }
 
-  //&::-moz-range-thumb:active {
-  //  background-color: #d22856;
-  //}
-  //
-  //&::-ms-thumb:active {
-  //  background-color: #d22856;
-  //}
+  &::-moz-range-thumb:active {
+    background-color: #c1c1c1;
+  }
+
+  &::-ms-thumb:active {
+    background-color: #c1c1c1;
+  }
 
   &::-webkit-slider-runnable-track {
     height: 3px;
     background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &::-ms-track {
+    height: 1px;
+    margin-top: -32px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: transparent;
+    border-color: transparent;
   }
 
   &::-webkit-slider-thumb {
@@ -32,51 +40,34 @@
     border-radius: 50%;
     background-color: @color-white;
     cursor: pointer;
+    cursor: hand;
   }
 
-  //&::-moz-range-track {
-  //  -moz-appearance: none;
-  //  width: 240px;
-  //  height: 2px;
-  //  background-color: @color-black;
-  //  outline: none;
-  //  border: none;
-  //}
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    background-color: @color-white;
+    cursor: pointer;
+  }
 
-  //&::-moz-range-thumb {
-  //  -moz-appearance: none;
-  //  width: 14px;
-  //  height: 14px;
-  //  border: 2px solid #d22856;
-  //  border-radius: 50%;
-  //  background-color: @color-white;
-  //  cursor: pointer;
-  //}
+  &::-ms-thumb {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    background-color: @color-white;
+    cursor: pointer;
+  }
 
-  //&::-ms-fill-lower,
-  //&::-ms-fill-upper {
-  //  background: transparent;
-  //}
-  //
-  //&::-ms-tooltip {
-  //  display: none;
-  //}
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background: transparent;
+  }
 
-  //&::-ms-track {
-  //  width: 240px;
-  //  height: 0px;
-  //  background-color: @color-black;
-  //  color: transparent;
-  //  border-color: transparent;
-  //}
-  //
-  //&::-ms-thumb {
-  //  width: 14px;
-  //  height: 14px;
-  //  padding: 0;
-  //  border: 2px solid #d22856;
-  //  border-radius: 50%;
-  //  background-color: @color-white;
-  //  cursor: pointer;
-  //}
+  &::-ms-tooltip {
+    display: none;
+  }
 }

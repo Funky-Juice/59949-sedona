@@ -12,7 +12,8 @@
 }
 
 .evaluation-fieldset__title {
-  margin-bottom: 26px;
+  max-width: 280px;
+  margin: 0 auto 26px auto;
   .font-title();
   line-height: 1.44;
   color: @color-black;
@@ -32,6 +33,12 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 25px;
+
+  &:active {
+    border: none;
+    outline: none;
+    background: none;
+  }
 
   @media @tablet-width {
     margin-left: 0;
