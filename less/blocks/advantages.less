@@ -31,6 +31,7 @@
 
     &--grey {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 }
@@ -60,6 +61,10 @@
 
     &:last-child {
       border: none;
+    }
+
+    @media @tablet-width {
+      width: 33.3%;
     }
   }
 
@@ -123,7 +128,7 @@
   line-height: 1.44;
 
   @media @tablet-width {
-    max-width: 170px;
+    max-width: 300px;
     font-size: @font-size-large;
   }
 }

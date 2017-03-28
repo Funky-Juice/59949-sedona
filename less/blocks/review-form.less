@@ -34,14 +34,19 @@
   }
 }
 
-.review-form__required-fields {
+.review-form__text-block {
   display: none;
 
   @media @tablet-width {
     display: block;
+    max-width: 250px;
     float: right;
     .font-main();
     line-height: 65px;
     color: @color-black;
+  }
+
+  @media @desktop-width {
+    max-width: 400px;
   }
 }

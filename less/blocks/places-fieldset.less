@@ -4,39 +4,38 @@
   text-align: center;
 
   @media @tablet-width {
+    position: relative;
     order: 3;
     width: 100%;
     margin: 0 auto 35px auto;
-    padding-top: 0;
+    padding-top: 80px;
     border: none;
     border-top: 1px solid @color-dark-grey;
   }
 }
 
 .places-fieldset__title {
-
-  &--tablet {
-    display: none;
-  }
-
-  margin-bottom: 30px;
+  max-width: 270px;
+  margin: 0 auto 30px auto;
   .font-title();
   line-height: 1.44;
   color: @color-black;
 
   @media @tablet-width {
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-      min-width: 350px;
-    }
-
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    min-width: 370px;
+    max-width: 370px;
+    width: 370px;
     margin-bottom: 40px;
+    background-color: @color-white;
     font-size: @font-size-large;
+  }
+
+  @media @desktop-width {
+    max-width: 450px;
   }
 }
 
