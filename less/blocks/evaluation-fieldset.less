@@ -1,7 +1,9 @@
 .evaluation-fieldset {
-  padding-top: 22px;
   border-top: 1px solid @color-dark-grey;
-  text-align: center;
+
+  @media @mobile-width-only {
+    padding: 18px 0 15px;
+  }
 
   @media @tablet-width {
     order: 0;
@@ -13,35 +15,43 @@
 
 .evaluation-fieldset__title {
   max-width: 280px;
-  margin: 0 auto 26px auto;
+  text-align: center;
   .font-title();
   line-height: 1.44;
   color: @color-black;
 
+  @media @mobile-width-only {
+    margin: 0 auto 23px;
+  }
+
   @media @tablet-width {
-    margin-bottom: 60px;
+    margin: 0 0 63px;
     text-align: left;
     font-size: @font-size-large;
+    line-height: 0.8;
   }
 
   @media @desktop-width {
+    margin-left: 76px;
     text-align: center;
   }
 }
 
 .evaluation-fieldset__wrap {
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 25px;
-
   &:active {
     border: none;
     outline: none;
     background: none;
   }
 
+  width: 280px;
+
+  @media @mobile-width-only {
+    margin: 0 auto 12px;
+  }
+
   @media @tablet-width {
-    margin-left: 0;
+    margin: 0 auto 21px 0;
     text-align: left;
   }
 }

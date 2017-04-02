@@ -33,12 +33,12 @@
 
   function showCover() {
     var coverDiv = document.createElement('div');
-    coverDiv.id = 'cover-div';
+    coverDiv.classList.add('cover-div');
     document.body.appendChild(coverDiv);
   };
 
   function hideCover() {
-    document.body.removeChild(document.getElementById('cover-div'));
+    document.body.removeChild(document.querySelector('.cover-div'));
   };
 
 
@@ -61,7 +61,7 @@
 
         var pattern = input.getAttribute('pattern');
 
-        if (!pattern) pattern = "^[А-Яа-яЁё \s \n \. \, \;]+$" ;
+        if (!pattern) pattern = '^[А-Яа-яЁё \s \n \. \, \;]+$' ;
 
         pattern = new RegExp(pattern);
 

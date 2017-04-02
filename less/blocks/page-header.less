@@ -7,24 +7,24 @@
   z-index: 99;
 
   @media @mobile-width-only {
-    width: 100%;
-    background-color: transparent;
-
     &--fixed {
       position: fixed;
     }
+
+    width: 100%;
+    background-color: transparent;
   }
 }
 
 .page-header__wrap {
-  position: relative;
-  height: 56px;
-  background-color: @color-white;
-
   &--transparent {
     height: 0;
     background-color: transparent;
   }
+
+  position: relative;
+  height: 56px;
+  background-color: @color-white;
 
   @media @tablet-width {
     position: static;
@@ -42,11 +42,11 @@
   z-index: 3;
 
   @media @desktop-width {
-    width: 186px;
-
     img {
       width: 186px;
       height: 96px;
     }
+
+    width: 186px;
   }
 }

@@ -1,5 +1,5 @@
 .contacts-fieldset {
-  padding-top: 22px;
+  padding-top: 21px;
   border-top: 1px solid @color-dark-grey;
   text-align: center;
 
@@ -7,33 +7,38 @@
     position: relative;
     order: 2;
     width: 100%;
-    margin: 0 auto 50px auto;
-    padding-top: 50px;
+    margin: 0 auto 53px;
+    padding-top: 39px;
     border: none;
     border-top: 1px solid @color-dark-grey;
   }
 
   @media @desktop-width {
     .clearfix();
+    margin: 0 auto 51px;
+    padding-top: 88px;
   }
 }
 
 .contacts-fieldset__title {
   max-width: 270px;
-  margin: 0 auto 30px auto;
   .font-title();
   line-height: 1.44;
   color: @color-black;
+
+  @media @mobile-width-only {
+    margin: 0 auto 20px;
+  }
 
   @media @tablet-width {
     position: absolute;
     top: -15px;
     left: 0;
     right: 0;
-    min-width: 370px;
-    max-width: 370px;
+    min-width: 400px;
+    max-width: 400px;
     width: 370px;
-    margin: 0 auto 22px auto;
+    margin: 0 auto 22px;
     background-color: @color-white;
     font-size: @font-size-large;
   }
@@ -47,15 +52,22 @@
 .contacts-fieldset__item {
   display: block;
   width: 280px;
-  margin: 0 auto 27px auto;
   text-align: left;
+
+  @media @mobile-width-only {
+    &:last-child {
+      margin: 0 auto 29px;
+    }
+
+    margin: 0 auto 44px;
+  }
 
   @media @tablet-width {
     width: auto;
+    margin: 0 auto 27px;
   }
 
   @media @desktop-width {
-
     &:nth-child(odd) {
       float: right;
     }
@@ -67,19 +79,24 @@
 }
 
 .contacts-fieldset__field-name {
-
   &--desktop {
     display: none;
   }
 
+  display: block;
   max-width: 200px;
   margin-left: 20px;
   margin-bottom: 5px;
   vertical-align: middle;
   overflow: hidden;
 
-  @media @desktop-width {
+  @media @mobile-width-only {
+    &--mobile {
+      margin-bottom: 10px;
+    }
+  }
 
+  @media @desktop-width {
     &--mobile {
       display: none;
     }
@@ -95,10 +112,6 @@
 }
 
 .contacts-fieldset__input-wrap {
-  display: block;
-  position: relative;
-  cursor: pointer;
-
   input {
     width: 100%;
   }
@@ -120,6 +133,10 @@
   &--email-icon::before {
     background: @color-dark-grey url('../img/icon-mail.svg') no-repeat center;
   }
+
+  display: block;
+  position: relative;
+  cursor: pointer;
 
   @media @desktop-width {
     display: inline-block;

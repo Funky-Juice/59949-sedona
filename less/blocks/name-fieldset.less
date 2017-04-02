@@ -1,13 +1,16 @@
 .name-fieldset {
-  padding-top: 23px;
   border-top: 1px solid @color-dark-grey;
   text-align: center;
+
+  @media @mobile-width-only {
+    padding-top: 18px;
+  }
 
   @media @tablet-width {
     order: 1;
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 60px;
+    margin-bottom: 83px;
     padding-top: 0;
     padding-left: 55px;
     border: none;
@@ -15,32 +18,45 @@
   }
 
   @media @desktop-width {
-    padding-left: 75px;
+    margin-bottom: 80px;
+    padding-left: 79px;
   }
 }
 
 .name-fieldset__title {
   max-width: 250px;
-  margin: 0 auto 24px auto;
   .font-title();
   line-height: 1.44;
   color: @color-black;
 
+  @media @mobile-width-only {
+    margin: 0 auto 22px;
+  }
+
   @media @tablet-width {
-    margin: 0 auto 60px 0;
+    margin: 0 auto 62px 1px;
     text-align: left;
     font-size: @font-size-large;
+    line-height: 0.8;
   }
 }
 
 .name-fieldset__item {
   display: flex;
   width: 280px;
-  margin: 0 auto 25px auto;
   cursor: pointer;
 
+  @media @mobile-width-only {
+    margin: 0 auto 22px;
+  }
+
   @media @tablet-width {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     width: 100%;
+    margin: 0 auto 20px;
   }
 }
 
@@ -49,6 +65,15 @@
   margin-right: 13px;
   line-height: 57px;
   overflow: hidden;
+
+  @media @mobile-width-only {
+    margin-right: 16px;
+  }
+
+  @media @tablet-width {
+    margin-right: 15px;
+    line-height: 58px;
+  }
 }
 
 .name-fieldset__input-wrap {

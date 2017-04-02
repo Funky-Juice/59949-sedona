@@ -1,5 +1,4 @@
 .control-panel {
-
   svg {
     cursor: pointer;
     fill: #5c6870;
@@ -22,7 +21,6 @@
   background-color: @color-lighter-grey;
 
   @media @tablet-width {
-
     svg {
       fill: @color-white;
     }
@@ -46,23 +44,30 @@
 
 .control-panel__progress-bar {
   position: absolute;
-  top: -44px;
+  top: -45px;
   left: 0;
   box-sizing: border-box;
   width: 280px;
-  height: 44px;
+  height: 45px;
   padding: 0 21px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
 
   @media @tablet-width {
-    top: 22px;
+    top: 25px;
     left: 93px;
     width: 390px;
+    padding: 0;
     background-color: transparent;
   }
 
   @media @desktop-width {
     width: 540px;
+  }
+}
+
+.control-panel__full-srceen-wrap {
+  @media @tablet-width {
+    margin-right: 6px;
   }
 }

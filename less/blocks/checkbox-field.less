@@ -1,13 +1,14 @@
 .checkbox-field {
+  &:hover .checkbox-field__checkbox{
+    background-color: #e5e5e5;
+  }
+
+  cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color:  transparent;
 }
 
 .checkbox-field__checkbox {
-  &:hover {
-    background-color: #e5e5e5;
-  }
-
   &:active {
     background-color: #d5d5d5;
   }
@@ -16,7 +17,7 @@
   position: relative;
   width: 56px;
   height: 56px;
-  margin-right: 24px;
+  margin-right: 19px;
   border: none;
   border-radius: 5px;
   vertical-align: middle;
@@ -59,15 +60,15 @@
   }
 
   &::before {
-    top: 50%;
-    left: 29%;
+    top: 53%;
+    left: 26%;
     width: 13px;
     transform: rotate(45deg);
   }
 
   &::after {
-    top: 47%;
-    left: 40%;
+    top: 49%;
+    left: 37%;
     width: 22px;
     transform: rotate(-47deg);
   }
