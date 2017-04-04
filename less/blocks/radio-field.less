@@ -47,16 +47,7 @@
   text-transform: none;
 }
 
-// комментарий для проверяющего:
-// пункт Д4
-// в данном случае для стилизации используется класс ".radio-field__checkbox"
-// id является условием при котором срабатывает стилизация
-// на базовом интенсиве так делается слайдер
-// пруф  http://take.ms/j06RG
-#radio-1:checked ~ .radio-field__checkbox,
-#radio-2:checked ~ .radio-field__checkbox,
-#radio-3:checked ~ .radio-field__checkbox {
-
+.radio-field__input:checked ~ .radio-field__checkbox{
   &:active::before {
     background-color: #a4a4a4;
   }

@@ -40,17 +40,7 @@
   cursor: pointer;
 }
 
-// комментарий для проверяющего:
-// пункт Д4
-// в данном случае для стилизации используется класс ".checkbox-field__checkbox"
-// id является условием при котором срабатывает стилизация
-// на базовом интенсиве так делается слайдер
-// пруф  http://take.ms/j06RG
-#checkbox-1:checked ~ .checkbox-field__checkbox,
-#checkbox-2:checked ~ .checkbox-field__checkbox,
-#checkbox-3:checked ~ .checkbox-field__checkbox,
-#checkbox-4:checked ~ .checkbox-field__checkbox {
-
+.checkbox-field__input:checked ~ .checkbox-field__checkbox{
   &:active::before,
   &:active::after{
     background-color: #a4a4a4;

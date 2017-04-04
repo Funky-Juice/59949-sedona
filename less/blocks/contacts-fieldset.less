@@ -50,24 +50,51 @@
 }
 
 .contacts-fieldset__item {
+  &:first-of-type::after {
+    content: 'Ошибка, перепроверьте номер';
+    font-size: @font-size-normal;
+    line-height: 26px;
+    text-transform: none;
+    color: #ff5c5c;
+  }
+
   display: block;
   width: 280px;
   text-align: left;
 
   @media @mobile-width-only {
+    &:first-of-type::after {
+      position: absolute;
+      bottom: -30px;
+      left: 22px;
+    }
+
     &:last-child {
       margin: 0 auto 29px;
     }
 
+    position: relative;
     margin: 0 auto 44px;
   }
 
   @media @tablet-width {
+    &:first-of-type::after {
+      position: absolute;
+      top: 36px;
+      right: 0;
+    }
+
     width: auto;
     margin: 0 auto 27px;
   }
 
   @media @desktop-width {
+    &:first-of-type::after {
+      position: absolute;
+      top: 54px;
+      left: 106px;
+    }
+
     &:nth-child(odd) {
       float: right;
     }
