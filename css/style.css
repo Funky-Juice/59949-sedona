@@ -433,11 +433,24 @@ fieldset {
   border: none;
 }
 .page-wrap {
+  position: relative;
   min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.6);
+}
+.page-wrap:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  width: 100%;
+  background: url('../img/sedona-photo-tablet.jpg') no-repeat top center;
+  opacity: 0.25;
+  z-index: 1000;
 }
 .page-header {
   box-sizing: border-box;
@@ -523,7 +536,7 @@ fieldset {
   font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 26px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -542,7 +555,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .intro__text {
@@ -552,7 +565,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.85;
+  line-height: 24px;
   color: #000000;
 }
 .advantages__item-container:first-child {
@@ -579,12 +592,12 @@ fieldset {
   display: none;
 }
 .advantages__item p {
-  margin: 0 auto;
+  margin: 0 auto 5px;
   font-family: ptsans, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 21px;
 }
 .advantages__item span {
   display: block;
@@ -593,7 +606,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 21px;
 }
 .advantages__item--first {
   padding: 28px 20px 40px;
@@ -611,7 +624,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
 }
 .advantages__img {
   box-sizing: border-box;
@@ -679,7 +692,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .popup__text-container p {
@@ -689,7 +702,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.71;
+  line-height: 24px;
 }
 .popup__button-container {
   padding: 20px;
@@ -705,7 +718,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .name-fieldset__item {
@@ -717,19 +730,19 @@ fieldset {
 .name-fieldset__field-name {
   max-width: 100px;
   margin-right: 13px;
-  line-height: 57px;
+  line-height: 58px;
   overflow: hidden;
 }
 .name-fieldset__input-wrap {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  width: 70%;
+  width: 69%;
 }
 .name-fieldset__input-wrap input {
   width: 100%;
 }
 .contacts-fieldset {
-  padding-top: 21px;
+  padding-top: 18px;
   border-top: 1px solid #e6e6e6;
   text-align: center;
 }
@@ -739,7 +752,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .contacts-fieldset__item {
@@ -758,7 +771,7 @@ fieldset {
   display: block;
   max-width: 200px;
   margin-left: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   vertical-align: middle;
   overflow: hidden;
 }
@@ -779,8 +792,8 @@ fieldset {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 57px;
-  height: 57px;
+  width: 58px;
+  height: 58px;
 }
 .contacts-fieldset__input-wrap--phone-icon::before {
   background: #e6e6e6 url('../img/icon-phone.svg') no-repeat center;
@@ -798,7 +811,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .evaluation-fieldset__wrap {
@@ -843,7 +856,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
 }
@@ -897,7 +910,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
   cursor: pointer;
@@ -936,7 +949,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .places-fieldset__wrap {
@@ -958,19 +971,26 @@ fieldset {
   text-transform: uppercase;
   max-width: 270px;
   margin: 0 auto;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .review-fieldset__input-wrap {
   width: 280px;
   margin: 0 auto;
 }
+.review-fieldset__input {
+  height: 100%;
+  white-space: pre-wrap;
+}
+.review-fieldset__input-wrap .review-fieldset__input:-ms-input-placeholder {
+  font-size: 18px;
+}
 .text-field {
   font-family: ptsans, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.85;
+  line-height: 26px;
   color: #000000;
   white-space: nowrap;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -986,7 +1006,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
 }
@@ -1003,7 +1023,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
 }
@@ -1012,7 +1032,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
 }
@@ -1021,7 +1041,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
 }
@@ -1030,9 +1050,12 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
   text-transform: none;
+}
+.text-field__input:-ms-input-placeholder {
+  font-size: 20px;
 }
 .text-field__input:invalid {
   box-shadow: none;
@@ -1050,7 +1073,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 21px;
   color: #000000;
 }
 .features__content {
@@ -1073,7 +1096,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .search-form {
@@ -1089,7 +1112,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.71;
+  line-height: 24px;
   color: #000000;
 }
 .search-form__wrap br {
@@ -1099,12 +1122,12 @@ fieldset {
   margin-bottom: 34px;
 }
 .search-form__title {
-  margin-bottom: 22px;
+  margin-bottom: 19px;
   font-family: ptsans, Arial, sans-serif;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.23;
+  line-height: 26px;
   color: #000000;
 }
 .photo-blog {
@@ -1140,7 +1163,7 @@ fieldset {
   font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 1.71;
+  line-height: 24px;
   color: #000000;
 }
 .photo-blog__author {
@@ -1149,7 +1172,7 @@ fieldset {
   font-weight: normal;
   text-transform: uppercase;
   text-transform: none;
-  line-height: 1.71;
+  line-height: 24px;
   color: #000000;
 }
 .photo-blog__like-icon {
@@ -1166,6 +1189,7 @@ fieldset {
   font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 24px;
   color: #000000;
 }
 .video-blog {
@@ -1177,7 +1201,7 @@ fieldset {
 }
 .video-blog__content {
   width: 280px;
-  margin: 0 auto 36px;
+  margin: 0 auto 35px;
   text-align: center;
 }
 .video-blog__content p {
@@ -1187,7 +1211,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.71;
+  line-height: 24px;
   color: #000000;
 }
 .video-blog__title {
@@ -1195,7 +1219,7 @@ fieldset {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.44;
+  line-height: 26px;
   color: #000000;
 }
 .video-blog__video-wrap {
@@ -1223,26 +1247,27 @@ fieldset {
   background-color: #e6e6e6;
 }
 .button--search-form {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  padding: 16px;
   font-family: ptsans, Arial, sans-serif;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 0.9;
+  line-height: 26px;
   color: #ffffff;
   background-color: #81b3d2;
 }
 .button--send-form {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 37px;
-  padding: 17px;
+  margin-bottom: 38px;
+  padding: 16px;
   border: none;
   font-family: ptsans, Arial, sans-serif;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.23;
+  line-height: 26px;
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -1372,7 +1397,6 @@ fieldset {
 .page-footer__wrap {
   box-sizing: border-box;
   width: 100%;
-  padding: 30px 8% 16px;
   text-align: center;
 }
 .page-footer__logo {
@@ -1389,7 +1413,7 @@ fieldset {
 }
 .social-links {
   box-sizing: border-box;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 .social-links__list {
   padding: 0;
@@ -1452,7 +1476,7 @@ fieldset {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 1.85;
+  line-height: 26px;
   color: #000000;
 }
 @media (orientation: landscape) and (min-width: 600px) and (max-width: 699px) {
@@ -1510,47 +1534,49 @@ fieldset {
   .intro::before {
     content: '';
     display: block;
-    height: 292px;
+    height: 290px;
     background: url('../img/bg-intro-triangle-tablet.svg') no-repeat 52% bottom, url('../img/text-sedona.svg') no-repeat center 45%, #81b3d2 url('../img/bg-back-tablet@1x.jpg') no-repeat bottom;
     background-size: 101.7%, 460px, cover;
   }
   .intro--index-page::before {
     height: 520px;
     background: url('../img/bg-intro-triangle-tablet.svg') no-repeat 52% bottom, url('../img/text-sedona-index.svg') no-repeat center 45%, #81b3d2 url('../img/bg-back-tablet@1x.jpg') no-repeat top;
-    background-size: 101.75%, 450px, cover;
-  }
-  .intro--index-page .intro__content {
-    width: 510px;
-  }
-  .intro--index-page .intro__title {
-    font-size: 21px;
-  }
-  .intro--index-page .intro__text {
-    max-width: none;
-    margin-bottom: 19px;
+    background-size: 101.75%, 460px, cover;
   }
   .intro__content {
     width: 455px;
-    padding: 64px 20px 30px;
   }
   .intro__content--index-page {
+    width: 510px;
     padding: 48px 20px 30px;
   }
+  .intro__content--photo-page {
+    padding: 73px 20px 31px;
+  }
   .intro__content--form-page {
-    padding: 64px 20px 35px;
+    padding: 73px 20px 35px;
   }
   .intro__title {
     max-width: none;
-    margin: 0 auto 21px;
+    margin: 0 auto 30px;
     font-size: 30px;
   }
   .intro__title--index-page {
-    margin: 0 auto 30px;
-    line-height: 1.2;
+    margin: 0 auto 29px;
+    font-size: 21px;
+    line-height: 26px;
   }
   .intro__text {
-    max-width: 440px;
+    max-width: 445px;
     margin-bottom: 38px;
+    line-height: 26px;
+  }
+  .intro__text--index-page {
+    max-width: none;
+    margin-bottom: 19px;
+  }
+  .intro__text--photo-page {
+    margin-bottom: 36px;
   }
   .advantages__item-container:first-child {
     padding-top: 0;
@@ -1568,7 +1594,7 @@ fieldset {
     flex-wrap: wrap;
   }
   .advantages__item {
-    padding: 42px 20px 40px;
+    padding: 47px 20px 40px;
   }
   .advantages__item br {
     display: inline;
@@ -1591,13 +1617,13 @@ fieldset {
     -ms-flex-positive: 1;
     flex-grow: 1;
     width: 33.3%;
-    padding: 43px 35px 46px;
+    padding: 47px 45px 40px;
     border: none;
   }
   .advantages__title {
     max-width: 300px;
     font-size: 21px;
-    line-height: 1.37;
+    line-height: 26px;
   }
   .advantages__img {
     height: 256px;
@@ -1685,7 +1711,7 @@ fieldset {
     margin: 0 auto 62px 1px;
     text-align: left;
     font-size: 21px;
-    line-height: 0.8;
+    line-height: 17px;
   }
   .name-fieldset__item {
     width: 100%;
@@ -1698,13 +1724,16 @@ fieldset {
     margin-right: 15px;
     line-height: 58px;
   }
+  .name-fieldset__input-wrap {
+    width: 67%;
+  }
   .contacts-fieldset {
     position: relative;
     -ms-flex-order: 2;
     order: 2;
     width: 100%;
-    margin: 0 auto 53px;
-    padding-top: 39px;
+    margin: 0 auto 55px;
+    padding-top: 36px;
     border: none;
     border-top: 1px solid #e6e6e6;
   }
@@ -1722,7 +1751,7 @@ fieldset {
   }
   .contacts-fieldset__item {
     width: auto;
-    margin: 0 auto 27px;
+    margin: 0 auto 23px;
   }
   .contacts-fieldset__item:first-of-type::after {
     position: absolute;
@@ -1740,7 +1769,7 @@ fieldset {
     margin: 0 0 63px;
     text-align: left;
     font-size: 21px;
-    line-height: 0.8;
+    line-height: 15px;
   }
   .evaluation-fieldset__wrap {
     margin: 0 auto 21px 0;
@@ -1754,8 +1783,8 @@ fieldset {
     -ms-flex-order: 3;
     order: 3;
     width: 100%;
-    margin: 0 auto 48px;
-    padding-top: 68px;
+    margin: 0 auto 49px;
+    padding-top: 67px;
     border: none;
     border-top: 1px solid #e6e6e6;
   }
@@ -1770,7 +1799,7 @@ fieldset {
     margin: 0 auto 40px;
     background-color: #ffffff;
     font-size: 21px;
-    line-height: 1.2;
+    line-height: 26px;
   }
   .places-fieldset__wrap {
     display: -ms-flexbox;
@@ -1801,14 +1830,14 @@ fieldset {
     -ms-flex-order: 4;
     order: 4;
     width: 100%;
-    margin-bottom: 53px;
+    margin-bottom: 50px;
     padding-top: 70px;
     border: none;
     border-top: 1px solid #e6e6e6;
   }
   .review-fieldset__title {
     position: absolute;
-    top: -15px;
+    top: -13px;
     left: 0;
     right: 0;
     min-width: 400px;
@@ -1856,7 +1885,7 @@ fieldset {
   }
   .features__content {
     margin-left: 0;
-    padding: 60px 40px 60px;
+    padding: 60px 40px 62px;
     text-align: center;
   }
   .features__content p {
@@ -1872,21 +1901,21 @@ fieldset {
     margin-bottom: 23px;
   }
   .features__title {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     font-size: 21px;
   }
   .search-form__wrap {
     width: 500px;
-    padding: 50px 20px 38px;
+    padding: 56px 20px 38px;
   }
   .search-form__wrap br {
     display: inline;
   }
   .search-form__wrap p {
-    margin-bottom: 43px;
+    margin-bottom: 42px;
   }
   .search-form__title {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     font-size: 30px;
   }
   .photo-blog {
@@ -1917,7 +1946,7 @@ fieldset {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
-    padding: 17px 20px;
+    padding: 16px 20px;
     background-color: #f2f2f2;
   }
   .photo-blog__likes-container {
@@ -1938,7 +1967,7 @@ fieldset {
   .video-blog__post {
     width: 100%;
     margin: 0 auto;
-    padding: 58px 0 0;
+    padding: 67px 0 0;
     border: none;
   }
   .video-blog__content {
@@ -1949,7 +1978,7 @@ fieldset {
     width: auto;
   }
   .video-blog__title {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     font-size: 30px;
   }
   .video-blog__video-wrap {
@@ -1997,7 +2026,7 @@ fieldset {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 36px 8%;
+    padding: 35px 8% 37px;
   }
   .page-footer__logo {
     max-width: 220px;
@@ -2025,7 +2054,7 @@ fieldset {
   }
   .intro--index-page::before {
     background: url('../img/bg-intro-triangle-tablet.svg') no-repeat 52% bottom, url('../img/text-sedona-index.svg') no-repeat center 45%, #81b3d2 url('../img/bg-back-tablet@2x.jpg') no-repeat top;
-    background-size: 101.75%, 450px, cover;
+    background-size: 101.75%, 460px, cover;
   }
   .advantages__img--first {
     background: #81b3d2 url('../img/photo-city-tablet@2x.jpg') no-repeat center;
@@ -2054,21 +2083,24 @@ fieldset {
     background-size: 101.75%, 460px, cover;
   }
   .intro--index-page::before {
-    height: 520px;
+    height: 518px;
     background: url('../img/bg-intro-triangle-desktop.svg') no-repeat 52% bottom, url('../img/text-sedona-index.svg') no-repeat center 46%, #81b3d2 url('../img/bg-back-desktop@1x.jpg') no-repeat top;
-    background-size: 101.75%, 450px, cover;
-  }
-  .intro__content {
-    padding: 104px 20px 32px;
+    background-size: 101.75%, 460px, cover;
   }
   .intro__content--index-page {
-    padding: 48px 20px 32px;
+    padding: 50px 20px 13px;
+  }
+  .intro__content--photo-page {
+    padding: 112px 20px 32px;
   }
   .intro__content--form-page {
-    padding: 104px 20px 20px;
+    padding: 112px 20px 20px;
+  }
+  .intro__text {
+    margin-bottom: 36px;
   }
   .advantages__item {
-    padding: 50px 20px 40px;
+    padding: 53px 20px 40px;
   }
   .advantages__item p {
     max-width: none;
@@ -2080,7 +2112,7 @@ fieldset {
     max-width: 230px;
   }
   .advantages__item--grey {
-    padding: 43px 40px 40px;
+    padding: 46px 40px 40px;
   }
   .advantages__item--grey p {
     margin-bottom: 26px;
@@ -2110,8 +2142,8 @@ fieldset {
     content: '';
     display: table;
     clear: both;
-    margin: 0 auto 51px;
-    padding-top: 88px;
+    margin: 0 auto 55px;
+    padding-top: 86px;
   }
   .contacts-fieldset__title {
     max-width: 450px;
@@ -2171,16 +2203,16 @@ fieldset {
     display: none;
   }
   .features__content {
-    padding: 60px 40px 81px;
+    padding: 60px 40px 83px;
   }
   .features__content p {
     max-width: 310px;
   }
   .search-form__wrap {
-    padding: 50px 20px 45px;
+    padding: 56px 20px 45px;
   }
   .search-form__wrap p {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
   }
   .photo-blog {
     width: 1200px;
@@ -2214,7 +2246,7 @@ fieldset {
     padding-bottom: 85px;
   }
   .video-blog__post {
-    padding-top: 62px;
+    padding-top: 71px;
   }
   .video-blog__content {
     margin-bottom: 71px;
@@ -2255,7 +2287,7 @@ fieldset {
   }
   .intro--index-page::before {
     background: url('../img/bg-intro-triangle-desktop.svg') no-repeat 52% bottom, url('../img/text-sedona-index.svg') no-repeat center 46%, #81b3d2 url('../img/bg-back-desktop@2x.jpg') no-repeat top;
-    background-size: 101.75%, 450px, cover;
+    background-size: 101.75%, 460px, cover;
   }
   .advantages__img--first {
     background: #81b3d2 url('../img/photo-city-desktop@2x.jpg') no-repeat center;
@@ -2268,6 +2300,11 @@ fieldset {
   .map__content {
     background: #ffffff url('../img/bg-map-desktop@2x.jpg') no-repeat center;
     background-size: cover;
+  }
+}
+@media (min-width: 1200px) and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .review-fieldset {
+    margin-bottom: 58px;
   }
 }
 @media (max-width: 767px) {
@@ -2292,7 +2329,7 @@ fieldset {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 2.22;
+    line-height: 40px;
   }
   .main-menu__item a:active {
     color: #88b6d1;
@@ -2321,24 +2358,37 @@ fieldset {
   }
   .intro--index-page::before {
     height: 389px;
-    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center 100%, url('../img/text-sedona-index.svg') no-repeat center, #81b3d2 url('../img/bg-back-mobile@1x.jpg') no-repeat top;
-    background-size: 103%, 290px, auto;
-  }
-  .intro__content {
-    padding: 38px 20px 25px;
+    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center 100%, url('../img/text-sedona-index.svg') no-repeat center 51%, #81b3d2 url('../img/bg-back-mobile@1x.jpg') no-repeat top;
+    background-size: 103%, 280px, auto;
   }
   .intro__content--index-page {
-    padding: 40px 20px 25px;
+    padding: 40px 20px 26px;
+  }
+  .intro__content--photo-page {
+    width: 271px;
+    padding: 38px 20px 27px;
   }
   .intro__content--form-page {
     width: auto;
-    padding: 38px 20px 14px;
+    padding: 38px 20px 17px;
   }
   .intro__title {
     margin: 0 auto 26px;
   }
   .intro__title--index-page {
-    margin: 0 auto 31px;
+    margin: 0 auto 29px;
+  }
+  .advantages__item {
+    padding: 40px 20px 34px;
+  }
+  .advantages__item--first {
+    padding: 26px 20px 36px;
+  }
+  .advantages__item--grey {
+    padding: 27px 35px 23px;
+  }
+  .advantages__title {
+    line-height: 26px;
   }
   .advantages__img--first {
     background: #81b3d2 url('../img/photo-city-mobile@1x.jpg') no-repeat center;
@@ -2349,13 +2399,14 @@ fieldset {
     background-size: cover;
   }
   .name-fieldset {
-    padding-top: 18px;
+    padding-top: 17px;
+    padding-bottom: 6px;
   }
   .name-fieldset__title {
-    margin: 0 auto 22px;
+    margin: 0 auto 21px;
   }
   .name-fieldset__item {
-    margin: 0 auto 22px;
+    margin: 0 auto 20px;
   }
   .name-fieldset__field-name {
     margin-right: 16px;
@@ -2365,7 +2416,7 @@ fieldset {
   }
   .contacts-fieldset__item {
     position: relative;
-    margin: 0 auto 44px;
+    margin: 0 auto 42px;
   }
   .contacts-fieldset__item:first-of-type::after {
     position: absolute;
@@ -2375,14 +2426,11 @@ fieldset {
   .contacts-fieldset__item:last-child {
     margin: 0 auto 29px;
   }
-  .contacts-fieldset__field-name--mobile {
-    margin-bottom: 10px;
-  }
   .evaluation-fieldset {
-    padding: 18px 0 15px;
+    padding: 17px 0 15px;
   }
   .evaluation-fieldset__title {
-    margin: 0 auto 23px;
+    margin: 0 auto 21px;
   }
   .evaluation-fieldset__wrap {
     margin: 0 auto 12px;
@@ -2391,29 +2439,42 @@ fieldset {
     margin-right: 17px;
   }
   .places-fieldset {
-    padding-top: 18px;
+    padding-top: 19px;
   }
   .places-fieldset__title {
-    margin: 0 auto 18px;
+    margin: 0 auto 16px;
   }
   .places-fieldset__item {
     margin-bottom: 24px;
   }
   .review-fieldset {
-    margin-bottom: 44px;
+    margin-bottom: 51px;
     padding-top: 20px;
   }
   .review-fieldset__title {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
-  .text-field__input {
-    padding: 15px 20px 17px;
+  .review-fieldset__input-wrap {
+    height: 160px;
+  }
+  .features__content {
+    padding: 14px 20px 13px;
+  }
+  .features__content p {
+    line-height: 21px;
+  }
+  .search-form__wrap {
+    padding: 28px 20px;
+    line-height: 24px;
+  }
+  .search-form__wrap p {
+    margin-bottom: 35px;
   }
   .photo-blog__post {
     padding: 22px 20px 15px;
   }
   .photo-blog__content {
-    padding-top: 18px;
+    padding-top: 16px;
   }
   .photo-blog__description {
     margin-bottom: 8px;
@@ -2422,11 +2483,14 @@ fieldset {
     padding-top: 33px;
   }
   .video-blog__title {
-    margin-bottom: 29px;
+    margin-bottom: 26px;
   }
   .map__content {
     background: #ffffff url('../img/bg-map-mobile@1x.jpg') no-repeat center;
     background-size: cover;
+  }
+  .page-footer__wrap {
+    padding: 30px 8% 16px;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
@@ -2435,8 +2499,8 @@ fieldset {
     background-size: 103%, 230px, 240%;
   }
   .intro--index-page::before {
-    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center 100%, url('../img/text-sedona-index.svg') no-repeat center, #81b3d2 url('../img/bg-back-mobile@2x.jpg') no-repeat top;
-    background-size: 103%, 290px, cover;
+    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center 100%, url('../img/text-sedona-index.svg') no-repeat center 51%, #81b3d2 url('../img/bg-back-mobile@2x.jpg') no-repeat top;
+    background-size: 103%, 280px, cover;
   }
   .advantages__img--first {
     background: #81b3d2 url('../img/photo-city-mobile@2x.jpg') no-repeat center;
