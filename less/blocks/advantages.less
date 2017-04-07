@@ -38,16 +38,16 @@
   }
 
   p {
-    margin: 0 auto;
+    margin: 0 auto 5px;
     .font-main();
-    line-height: 1.5;
+    line-height: 21px;
   }
 
   span {
     display: block;
     margin-bottom: 15px;
     .font-main();
-    line-height: 1.5;
+    line-height: 21px;
   }
 
   &--first {
@@ -68,6 +68,18 @@
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
+
+  @media @mobile-width-only {
+    &--first {
+      padding: 26px 20px 36px;
+    }
+
+    &--grey {
+      padding: 27px 35px 23px;
+    }
+
+    padding: 40px 20px 34px;
+  }
 
   @media @tablet-width {
     br {
@@ -95,11 +107,11 @@
     &--grey {
       flex-grow: 1;
       width: 33.3%;
-      padding: 43px 35px 46px;
+      padding: 47px 45px 40px;
       border: none;
     }
 
-    padding: 42px 20px 40px;
+    padding: 47px 20px 40px;
   }
 
   @media @desktop-width {
@@ -120,26 +132,30 @@
     }
 
     &--grey {
-      padding: 43px 40px 40px;
+      padding: 46px 40px 40px;
 
       p {
         margin-bottom: 26px;
       }
     }
 
-    padding: 50px 20px 40px;
+    padding: 53px 20px 40px;
   }
 }
 
 .advantages__title {
   margin: 0 auto 8px;
   .font-title();
-  line-height: 1.44;
+  line-height: 26px;
+
+  @media @mobile-width-only {
+    line-height: 26px;
+  }
 
   @media @tablet-width {
     max-width: 300px;
     font-size: @font-size-large;
-    line-height: 1.37;
+    line-height: 26px;
   }
 }
 

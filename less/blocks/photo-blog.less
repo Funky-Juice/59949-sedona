@@ -8,6 +8,10 @@
     margin: 0 auto;
   }
 
+  //@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  //  width: 86.3%; //only for @tablet-width
+  //}
+
   @media @desktop-width {
     width: 1200px;
   }
@@ -66,7 +70,7 @@
   text-align: left;
 
   @media @mobile-width-only {
-    padding-top: 18px;
+    padding-top: 16px;
   }
 
   @media @tablet-width {
@@ -74,7 +78,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 17px 20px;
+    padding: 16px 20px;
     background-color: @color-lighter-grey;
   }
 
@@ -97,7 +101,7 @@
 .photo-blog__title {
   .font-main();
   font-weight: bold;
-  line-height: 1.71;
+  line-height: 24px;
   color: @color-black;
 
   @media @desktop-width {
@@ -108,7 +112,7 @@
 .photo-blog__author {
   .font-main();
   text-transform: none;
-  line-height: 1.71;
+  line-height: 24px;
   color: @color-black;
 
   @media @desktop-width {
@@ -143,6 +147,7 @@
   vertical-align: middle;
   .font-main();
   font-weight: bold;
+  line-height: 24px;
   color: @color-black;
 
   @media @desktop-width {

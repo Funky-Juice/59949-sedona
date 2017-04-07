@@ -7,13 +7,20 @@
 .page-footer__wrap {
   box-sizing: border-box;
   width: 100%;
-  padding: 30px 8% 16px;
   text-align: center;
+
+  @media @mobile-width-only {
+    padding: 30px 8% 16px;
+  }
+
+  //@media (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+  //  padding: 36px 7%; //only for @tablet-width
+  //}
 
   @media @tablet-width {
     display: flex;
     justify-content: space-between;
-    padding: 36px 8%;
+    padding: 35px 8% 37px;
   }
 
   @media @desktop-width {
