@@ -17,7 +17,7 @@
   padding: 30px 20px;
   text-align: center;
   .font-main();
-  line-height: 24px;
+  line-height: @lh-24;
   color: @color-black;
 
   @media @mobile-width-only {
@@ -26,7 +26,6 @@
     }
 
     padding: 28px 20px;
-    line-height: 24px;
   }
 
   @media @tablet-width {
@@ -54,11 +53,11 @@
 .search-form__title {
   margin-bottom: 19px;
   .font-title-big();
-  line-height: 26px;
+  line-height: @lh-26;
   color: @color-black;
 
   @media @tablet-width {
     margin-bottom: 30px;
-    font-size: @font-size-extra-large;
+    font-size: @fs-30;
   }
 }

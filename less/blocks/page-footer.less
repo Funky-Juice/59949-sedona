@@ -13,11 +13,11 @@
     padding: 30px 8% 16px;
   }
 
-  //@media (-ms-high-contrast: active), (-ms-high-contrast: none)  {
-  //  padding: 36px 7%; //only for @tablet-width
-  //}
-
   @media @tablet-width {
+    &--ie11-patch {
+      padding: 35px 7% 37px;
+    }
+
     display: flex;
     justify-content: space-between;
     padding: 35px 8% 37px;
@@ -27,6 +27,7 @@
     &--form-page {
       padding: 36px 10%;
     }
+
     padding: 36px 11%;
   }
 }
@@ -35,10 +36,10 @@
   box-sizing: border-box;
   display: block;
   margin-bottom: 29px;
-  line-height: 38px;
   .font-title-big();
-  color: @color-black;
+  line-height: 38px;
   text-decoration: none;
+  color: @color-black;
 
   @media @tablet-width {
     max-width: 220px;

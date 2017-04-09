@@ -433,24 +433,11 @@ fieldset {
   border: none;
 }
 .page-wrap {
-  position: relative;
   min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.6);
-}
-.page-wrap:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: '';
-  width: 100%;
-  background: url('../img/sedona-photo-tablet.jpg') no-repeat top center;
-  opacity: 0.25;
-  z-index: 1000;
 }
 .page-header {
   box-sizing: border-box;
@@ -523,9 +510,9 @@ fieldset {
   list-style: none;
 }
 .main-menu__item {
+  box-sizing: border-box;
   width: 100%;
   min-height: 55px;
-  box-sizing: border-box;
   padding: 5px;
   text-align: center;
   background-color: #81b3d2;
@@ -550,13 +537,16 @@ fieldset {
 }
 .intro__title {
   max-width: 265px;
-  margin: 0 auto 25px;
+  margin: 0 auto 26px;
   font-family: ptsans, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 26px;
   color: #000000;
+}
+.intro__title--index-page {
+  margin: 0 auto 29px;
 }
 .intro__text {
   display: block;
@@ -570,9 +560,8 @@ fieldset {
 }
 .advantages__item-container:first-child {
   padding-top: 10%;
-  background: #81b3d2 url('../img/bg-triangle.svg') no-repeat;
+  background: #81b3d2 url('../img/bg-triangle.svg') no-repeat center -20px;
   background-size: 105%;
-  background-position: center -20px;
 }
 .advantages__item-container--blue {
   background-color: #81b3d2;
@@ -682,7 +671,7 @@ fieldset {
   }
 }
 .popup__text-container {
-  padding: 40px 20px 30px 20px;
+  padding: 40px 20px 30px;
   background: #ffffff;
   text-align: center;
 }
@@ -725,6 +714,7 @@ fieldset {
   display: -ms-flexbox;
   display: flex;
   width: 280px;
+  margin: 0 auto 20px;
   cursor: pointer;
 }
 .name-fieldset__field-name {
@@ -976,6 +966,7 @@ fieldset {
 }
 .review-fieldset__input-wrap {
   width: 280px;
+  height: 160px;
   margin: 0 auto;
 }
 .review-fieldset__input {
@@ -1403,13 +1394,13 @@ fieldset {
   box-sizing: border-box;
   display: block;
   margin-bottom: 29px;
-  line-height: 38px;
   font-family: ptsans, Arial, sans-serif;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #000000;
+  line-height: 38px;
   text-decoration: none;
+  color: #000000;
 }
 .social-links {
   box-sizing: border-box;
@@ -1562,13 +1553,11 @@ fieldset {
     font-size: 30px;
   }
   .intro__title--index-page {
-    margin: 0 auto 29px;
     font-size: 21px;
     line-height: 26px;
   }
   .intro__text {
     max-width: 445px;
-    margin-bottom: 38px;
     line-height: 26px;
   }
   .intro__text--index-page {
@@ -1577,6 +1566,9 @@ fieldset {
   }
   .intro__text--photo-page {
     margin-bottom: 36px;
+  }
+  .intro__text--form-page {
+    margin-bottom: 37px;
   }
   .advantages__item-container:first-child {
     padding-top: 0;
@@ -1623,7 +1615,6 @@ fieldset {
   .advantages__title {
     max-width: 300px;
     font-size: 21px;
-    line-height: 26px;
   }
   .advantages__img {
     height: 256px;
@@ -1701,7 +1692,7 @@ fieldset {
     order: 1;
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 83px;
+    margin-bottom: 82px;
     padding-top: 0;
     padding-left: 55px;
     border: none;
@@ -1715,14 +1706,12 @@ fieldset {
   }
   .name-fieldset__item {
     width: 100%;
-    margin: 0 auto 20px;
   }
   .name-fieldset__item:last-child {
     margin-bottom: 0;
   }
   .name-fieldset__field-name {
     margin-right: 15px;
-    line-height: 58px;
   }
   .name-fieldset__input-wrap {
     width: 67%;
@@ -1799,7 +1788,6 @@ fieldset {
     margin: 0 auto 40px;
     background-color: #ffffff;
     font-size: 21px;
-    line-height: 26px;
   }
   .places-fieldset__wrap {
     display: -ms-flexbox;
@@ -1830,7 +1818,7 @@ fieldset {
     -ms-flex-order: 4;
     order: 4;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 58px;
     padding-top: 70px;
     border: none;
     border-top: 1px solid #e6e6e6;
@@ -1925,6 +1913,12 @@ fieldset {
     flex-wrap: wrap;
     width: 84.37%;
     margin: 0 auto;
+  }
+  .photo-blog--ie11-patch {
+    width: 86.3%;
+  }
+  .photo-blog--edge-patch {
+    width: 85.7%;
   }
   .photo-blog__post {
     width: 50%;
@@ -2021,12 +2015,21 @@ fieldset {
   .control-panel__full-srceen-wrap {
     margin-right: 6px;
   }
+  .range-filter--edge-patch {
+    height: 85px;
+  }
+  .range-filter--edge-patch::-ms-track {
+    margin-top: -43px;
+  }
   .page-footer__wrap {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 35px 8% 37px;
+  }
+  .page-footer__wrap--ie11-patch {
+    padding: 35px 7% 37px;
   }
   .page-footer__logo {
     max-width: 220px;
@@ -2142,7 +2145,6 @@ fieldset {
     content: '';
     display: table;
     clear: both;
-    margin: 0 auto 55px;
     padding-top: 86px;
   }
   .contacts-fieldset__title {
@@ -2181,7 +2183,6 @@ fieldset {
   }
   .places-fieldset {
     margin: 0 auto 47px;
-    padding-top: 67px;
   }
   .places-fieldset__title {
     max-width: 450px;
@@ -2262,6 +2263,12 @@ fieldset {
   .control-panel__progress-bar {
     width: 540px;
   }
+  .range-filter--edge-patch {
+    height: 78px;
+  }
+  .range-filter--edge-patch::-ms-track {
+    margin-top: -39px;
+  }
   .page-footer__wrap {
     padding: 36px 11%;
   }
@@ -2277,7 +2284,8 @@ fieldset {
     margin-right: -88px;
   }
   .developer--form-page {
-    margin: 0;
+    margin-left: 78px;
+    margin-right: -78px;
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
@@ -2300,11 +2308,6 @@ fieldset {
   .map__content {
     background: #ffffff url('../img/bg-map-desktop@2x.jpg') no-repeat center;
     background-size: cover;
-  }
-}
-@media (min-width: 1200px) and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .review-fieldset {
-    margin-bottom: 58px;
   }
 }
 @media (max-width: 767px) {
@@ -2372,11 +2375,8 @@ fieldset {
     width: auto;
     padding: 38px 20px 17px;
   }
-  .intro__title {
-    margin: 0 auto 26px;
-  }
-  .intro__title--index-page {
-    margin: 0 auto 29px;
+  .intro__text--form-page {
+    max-width: 330px;
   }
   .advantages__item {
     padding: 40px 20px 34px;
@@ -2386,9 +2386,6 @@ fieldset {
   }
   .advantages__item--grey {
     padding: 27px 35px 23px;
-  }
-  .advantages__title {
-    line-height: 26px;
   }
   .advantages__img--first {
     background: #81b3d2 url('../img/photo-city-mobile@1x.jpg') no-repeat center;
@@ -2404,9 +2401,6 @@ fieldset {
   }
   .name-fieldset__title {
     margin: 0 auto 21px;
-  }
-  .name-fieldset__item {
-    margin: 0 auto 20px;
   }
   .name-fieldset__field-name {
     margin-right: 16px;
@@ -2454,9 +2448,6 @@ fieldset {
   .review-fieldset__title {
     margin-bottom: 17px;
   }
-  .review-fieldset__input-wrap {
-    height: 160px;
-  }
   .features__content {
     padding: 14px 20px 13px;
   }
@@ -2465,7 +2456,6 @@ fieldset {
   }
   .search-form__wrap {
     padding: 28px 20px;
-    line-height: 24px;
   }
   .search-form__wrap p {
     margin-bottom: 35px;
@@ -2488,6 +2478,12 @@ fieldset {
   .map__content {
     background: #ffffff url('../img/bg-map-mobile@1x.jpg') no-repeat center;
     background-size: cover;
+  }
+  .range-filter--edge-patch {
+    height: 85px;
+  }
+  .range-filter--edge-patch::-ms-track {
+    margin-top: -40px;
   }
   .page-footer__wrap {
     padding: 30px 8% 16px;

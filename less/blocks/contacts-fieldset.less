@@ -15,7 +15,6 @@
 
   @media @desktop-width {
     .clearfix();
-    margin: 0 auto 55px;
     padding-top: 86px;
   }
 }
@@ -23,7 +22,7 @@
 .contacts-fieldset__title {
   max-width: 270px;
   .font-title();
-  line-height: 26px;
+  line-height: @lh-26;
   color: @color-black;
 
   @media @mobile-width-only {
@@ -40,7 +39,7 @@
     width: 370px;
     margin: 0 auto 22px;
     background-color: @color-white;
-    font-size: @font-size-large;
+    font-size: @fs-21;
   }
 
   @media @desktop-width {
@@ -52,8 +51,8 @@
 .contacts-fieldset__item {
   &:first-of-type::after {
     content: 'Ошибка, перепроверьте номер';
-    font-size: @font-size-normal;
-    line-height: 26px;
+    font-size: @fs-14;
+    line-height: @lh-26;
     text-transform: none;
     color: #ff5c5c;
   }
@@ -116,13 +115,6 @@
   margin-bottom: 7px;
   vertical-align: middle;
   overflow: hidden;
-
-  //@media @mobile-width-only {
-  //  &--mobile {
-  //    margin-bottom: 10px;
-  //    margin-bottom: 7px;//new
-  //  }
-  //}
 
   @media @desktop-width {
     &--mobile {

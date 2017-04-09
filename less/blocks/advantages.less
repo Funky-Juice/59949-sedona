@@ -1,9 +1,8 @@
 .advantages__item-container {
   &:first-child {
     padding-top: 10%;
-    background: @color-light-blue url('../img/bg-triangle.svg') no-repeat;
+    background: @color-light-blue url('../img/bg-triangle.svg') no-repeat center -20px;
     background-size: 105%;
-    background-position: center -20px;
   }
 
   &--blue {
@@ -40,14 +39,14 @@
   p {
     margin: 0 auto 5px;
     .font-main();
-    line-height: 21px;
+    line-height: @lh-21;
   }
 
   span {
     display: block;
     margin-bottom: 15px;
     .font-main();
-    line-height: 21px;
+    line-height: @lh-21;
   }
 
   &--first {
@@ -146,16 +145,11 @@
 .advantages__title {
   margin: 0 auto 8px;
   .font-title();
-  line-height: 26px;
-
-  @media @mobile-width-only {
-    line-height: 26px;
-  }
+  line-height: @lh-26;
 
   @media @tablet-width {
     max-width: 300px;
-    font-size: @font-size-large;
-    line-height: 26px;
+    font-size: @fs-21;
   }
 }
 

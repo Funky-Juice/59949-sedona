@@ -162,30 +162,25 @@
 }
 
 .intro__title {
-  max-width: 265px;
-  margin: 0 auto 25px;
-  .font-title();
-  line-height: 26px;
-  color: @color-black;
-
-  @media @mobile-width-only {
-    &--index-page {
-      margin: 0 auto 29px;
-    }
-
-    margin: 0 auto 26px;
+  &--index-page {
+    margin: 0 auto 29px;
   }
+
+  max-width: 265px;
+  margin: 0 auto 26px;
+  .font-title();
+  line-height: @lh-26;
+  color: @color-black;
 
   @media @tablet-width {
     &--index-page {
-      margin: 0 auto 29px;
-      font-size: @font-size-large;
-      line-height: 26px;
+      font-size: @fs-21;
+      line-height: @lh-26;
     }
 
     max-width: none;
     margin: 0 auto 30px;
-    font-size: @font-size-extra-large;
+    font-size: @fs-30;
   }
 }
 
@@ -193,8 +188,14 @@
   display: block;
   margin: 0 auto;
   .font-main();
-  line-height: 24px;
+  line-height: @lh-24;
   color: @color-black;
+
+  @media @mobile-width-only {
+    &--form-page {
+      max-width: 330px;
+    }
+  }
 
   @media @tablet-width {
     &--index-page {
@@ -206,9 +207,12 @@
       margin-bottom: 36px;
     }
 
+    &--form-page {
+      margin-bottom: 37px;
+    }
+
     max-width: 445px;
-    margin-bottom: 38px;
-    line-height: 26px;
+    line-height: @lh-26;
   }
 
   @media @desktop-width {

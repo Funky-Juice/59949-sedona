@@ -12,7 +12,6 @@ function mask(inputName, mask, evt) {
     var inputField = document.getElementById(inputName);
     var value = inputField.value;
 
-    // If user pressed DEL or BACK SPACE, clean the value
     try {
       var evt = (evt.which) ? evt.which : event.keyCode;
       if ( evt == 46 || evt == 8 ) {
@@ -29,12 +28,10 @@ function mask(inputName, mask, evt) {
       if (mId >= value.length)
         break;
 
-      // Number expected but got a different value, store only the valid portion
       if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
         break;
       }
 
-      // Found a literal
       while (mask[mId].match(literalPattern) == null) {
         if (value[vId] == mask[mId])
           break;
